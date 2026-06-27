@@ -14,6 +14,7 @@
     <style>
         :root {
             --bleu-fas: #1a3a5c;
+            --bleu-fas-clair: #245b83;
             --orange-fas: #e8540a;
             --fond-chaud: #f7f2e9;
             --texte: #252525;
@@ -24,8 +25,8 @@
         }
 
         .games-hero {
-            background: linear-gradient(135deg, #1a3a5c 0%, #245b83 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--bleu-fas) 0%, var(--bleu-fas-clair) 100%);
+            color: #ffffff;
             padding: 58px 40px;
             text-align: center;
             margin-bottom: 2.5rem;
@@ -33,8 +34,8 @@
 
         .games-hero-tag {
             display: inline-block;
-            background: var(--orange-fas);
-            color: #ffffff;
+            background: #ffffff;
+            color: var(--bleu-fas);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.12em;
@@ -46,18 +47,21 @@
         }
 
         .games-hero h1 {
+            color: #ffffff;
             font-family: "Merriweather", serif;
             font-size: clamp(2rem, 4vw, 3rem);
             line-height: 1.15;
             margin: 0 0 18px;
+            text-wrap: balance;
         }
 
         .games-hero p {
+            color: #ffffff;
             font-size: 16px;
             max-width: 760px;
             margin: 0 auto;
             line-height: 1.7;
-            opacity: 0.92;
+            opacity: 0.94;
             font-family: "PT Sans", sans-serif;
         }
 
@@ -89,6 +93,7 @@
             font-size: clamp(1.7rem, 3vw, 2.35rem);
             line-height: 1.25;
             margin: 0 0 14px;
+            text-wrap: balance;
         }
 
         .section-intro p {
@@ -131,6 +136,7 @@
             line-height: 1.3;
             margin: 0 0 12px;
             font-family: "Merriweather", serif;
+            text-wrap: balance;
         }
 
         .feature-content p {
@@ -180,8 +186,7 @@
             align-items: center;
         }
 
-        .btn-primary,
-        .btn-secondary {
+        .btn-primary {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -194,9 +199,6 @@
             text-decoration: none;
             font-family: "PT Sans", sans-serif;
             transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
-        }
-
-        .btn-primary {
             background: var(--bleu-fas);
             color: #ffffff;
         }
@@ -204,19 +206,6 @@
         .btn-primary:hover,
         .btn-primary:focus {
             background: var(--orange-fas);
-            color: #ffffff;
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: #ffffff;
-            color: var(--bleu-fas);
-            border: 2px solid var(--bleu-fas);
-        }
-
-        .btn-secondary:hover,
-        .btn-secondary:focus {
-            background: var(--bleu-fas);
             color: #ffffff;
             transform: translateY(-1px);
         }
@@ -277,6 +266,7 @@
             font-family: "Merriweather", serif;
             margin: 0 0 18px;
             font-size: 1.65rem;
+            text-wrap: balance;
         }
 
         .steps {
@@ -323,40 +313,55 @@
             margin: 0;
         }
 
-        .resource-strip {
+        .toolkit-panel {
             margin-top: 42px;
-            background: var(--bleu-fas);
-            color: #ffffff;
-            border-radius: 20px;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .resource-strip h2 {
-            margin: 0 0 10px;
-            font-family: "Merriweather", serif;
-            font-size: 1.45rem;
-        }
-
-        .resource-strip p {
-            margin: 0;
-            line-height: 1.65;
-            opacity: 0.9;
-        }
-
-        .resource-strip .btn-primary {
             background: #ffffff;
-            color: var(--bleu-fas);
-            white-space: nowrap;
+            border: 1px solid var(--bordure);
+            border-radius: 20px;
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 30px;
+            align-items: start;
+            box-shadow: 0 10px 24px rgba(26, 58, 92, 0.06);
         }
 
-        .resource-strip .btn-primary:hover,
-        .resource-strip .btn-primary:focus {
-            background: var(--orange-fas);
-            color: #ffffff;
+        .toolkit-panel h2 {
+            color: var(--bleu-fas);
+            font-family: "Merriweather", serif;
+            font-size: 1.55rem;
+            line-height: 1.3;
+            margin: 0 0 12px;
+            text-wrap: balance;
+        }
+
+        .toolkit-panel p {
+            color: var(--texte-secondaire);
+            line-height: 1.7;
+            margin: 0;
+            font-size: 15.5px;
+        }
+
+        .toolkit-list {
+            display: grid;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .toolkit-list li {
+            background: var(--fond-chaud);
+            border-left: 5px solid var(--orange-fas);
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: var(--texte);
+            line-height: 1.55;
+            font-size: 15px;
+        }
+
+        .toolkit-list strong {
+            color: var(--bleu-fas);
         }
 
         .quote-block {
@@ -399,7 +404,7 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .resource-strip {
+            .toolkit-panel {
                 grid-template-columns: 1fr;
             }
         }
@@ -415,7 +420,7 @@
 
             .feature-card,
             .method-panel,
-            .resource-strip {
+            .toolkit-panel {
                 padding: 24px 20px;
             }
 
@@ -427,8 +432,7 @@
                 align-items: stretch;
             }
 
-            .btn-primary,
-            .btn-secondary {
+            .btn-primary {
                 width: 100%;
             }
         }
@@ -569,9 +573,6 @@
                             <a class="btn-primary" href="https://flippizz.com/12-jeux-pour-la-classe-de-fle-sans-materiel/" target="_blank" rel="noopener">
                                 Découvrir les 12 jeux Flippizz
                             </a>
-                            <a class="btn-secondary" href="../supports/activites.html">
-                                Voir aussi les activités
-                            </a>
                         </div>
                     </div>
                 </article>
@@ -645,18 +646,22 @@
                     </div>
                 </section>
 
-                <section class="resource-strip" aria-labelledby="ressource-flippizz">
+                <section class="toolkit-panel" aria-labelledby="mallette-locale">
                     <div>
-                        <h2 id="ressource-flippizz">Ressource complémentaire : Flippizz</h2>
+                        <h2 id="mallette-locale">Composer sa mallette locale de jeux</h2>
                         <p>
-                            L'article « 12 jeux pour la classe de FLE sans matériel » propose des idées
-                            directement transposables en atelier : nombres, vocabulaire, questions,
-                            mime, dessin, mémoire, enchères ou jeux de devinettes.
+                            Une bonne mallette n'est pas une collection figée. C'est un ensemble léger,
+                            modifiable et réutilisable, capable de s'adapter aux niveaux, aux langues
+                            premières, aux thèmes travaillés et aux besoins concrets des apprenants.
                         </p>
                     </div>
-                    <a class="btn-primary" href="https://flippizz.com/12-jeux-pour-la-classe-de-fle-sans-materiel/" target="_blank" rel="noopener">
-                        Ouvrir la ressource
-                    </a>
+
+                    <ul class="toolkit-list">
+                        <li><strong>Matériel de base :</strong> dés, pions, cartes vierges, feutres, enveloppes, jetons, minuteur.</li>
+                        <li><strong>Supports personnalisables :</strong> pictogrammes, photos du quotidien, mots-étiquettes, cartes de lieux, cartes d'actions.</li>
+                        <li><strong>Jeux faciles à détourner :</strong> memory, loto, dominos, jeux de familles, parcours, devinettes, jeux de rapidité.</li>
+                        <li><strong>Trace pédagogique :</strong> conserver les règles adaptées, les variantes testées et les phrases-cibles qui fonctionnent.</li>
+                    </ul>
                 </section>
             </section>
 
