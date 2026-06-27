@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictogrammes - Formateurs FLE Armée du Salut</title>
+    <meta name="description" content="Supports visuels gratuits pour la communication avec les publics Alpha / A1.1. Pictogrammes Freepik et Fondation Autisme Luxembourg.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <style>
+        /* Styles spécifiques à la sous-page (identique à supports.html) */
+        .supports-hero {
+            background: #1a3a5c;
+            color: white;
+            padding: 56px 40px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .supports-hero-tag {
+            display: inline-block;
+            background: #e8540a;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 99px;
+            margin-bottom: 16px;
+            font-family: sans-serif;
+        }
+        .supports-hero p {
+            font-size: 15px;
+            opacity: 0.82;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-family: sans-serif;
+        }
+        .supports-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 44px 32px;
+        }
+        .supports-section-tag {
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e8540a;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .resource-card {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .ic-fp { background: #dbeafe; color: #1e40af; }
+        .ic-fal { background: #E1F5EE; color: #085041; }
+        .card-content { flex: 1; min-width: 220px; }
+        .card-title { font-size: 18px; font-weight: bold; color: #1a3a5c; margin-bottom: 6px; }
+        .card-tag { display: inline-block; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 99px; font-family: sans-serif; margin-bottom: 12px; }
+        .tag-fp { background: #dbeafe; color: #1e40af; }
+        .tag-fal { background: #E1F5EE; color: #085041; }
+        .card-desc { font-size: 14px; color: #6b6b67; line-height: 1.6; margin-bottom: 20px; }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a3a5c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: background 0.15s;
+        }
+        .btn-primary:hover { background: #e8540a; color: white; }
+        .btn-primary svg { width: 16px; height: 16px; }
+        .supports-quote {
+            background: #e8540a;
+            padding: 44px 32px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .supports-quote blockquote {
+            font-size: 17px;
+            font-style: italic;
+            color: white;
+            max-width: 660px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .supports-quote cite {
+            display: block;
+            font-size: 12px;
+            color: rgba(255,255,255,0.75);
+            font-style: normal;
+            font-family: sans-serif;
+            margin-top: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        @media (max-width: 768px) {
+            .supports-hero { padding: 40px 20px; }
+            .supports-section { padding: 30px 20px; }
+            .resource-card { padding: 20px; flex-direction: column; align-items: center; text-align: center; }
+            .btn-primary { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="navbar-container">
+        <a href="../../" class="navbar-logo" aria-label="Accueil">
+            <img src="../../assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
+            <span class="navbar-title">Formateurs de Français</span>
+        </a>
+        <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
+        <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li class="nav-item"><a href="../../" class="nav-link">Accueil</a></li>
+            <li class="nav-item">
+                <a href="../agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
+                <ul class="nav-submenu">
+                    <li><a href="../agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                    <li><a href="../agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="../gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
+            <li class="nav-item"><a href="../employer-une-methode/" class="nav-link">Employer une méthode</a></li>
+            <li class="nav-item">
+                <a href="./" class="nav-link">Supports</a>
+                <ul class="nav-submenu">
+                    <li><a href="pictos.html">Pictos</a></li>
+                    <li><a href="planches.html">Planches</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="../sites-utiles/" class="nav-link">Sites utiles</a>
+                <ul class="nav-submenu">
+                    <li><a href="../sites-utiles/jouer-en-ligne.html">Jouer en ligne</a></li>
+                    <li><a href="../sites-utiles/creer-ses-applis.html">Créer ses applis</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="../activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
+            <li class="nav-item">
+                <a href="../mallettes-locales/" class="nav-link">Mallettes locales</a>
+                <ul class="nav-submenu">
+                    <li><a href="../mallettes-locales/methode-macle-alpha.html">Méthode MaClé Alpha</a></li>
+                    <li><a href="../mallettes-locales/ressources-macle-alpha.html">Ressources MaClé Alpha</a></li>
+                    <li><a href="../mallettes-locales/jeux-de-societe.html">Jeux de société</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="../parcours-durables.html" class="nav-link">Parcours durables</a></li>
+            <li class="nav-item">
+                <a href="../evaluer/" class="nav-link">Évaluer</a>
+                <ul class="nav-submenu">
+                    <li><a href="../evaluer/cecrl.html">CECRL</a></li>
+                    <li><a href="../evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="../sinformer.html" class="nav-link">S'informer</a></li>
+            <li class="nav-item"><a href="../se-former.html" class="nav-link">Se former</a></li>
+            <li class="nav-item"><a href="../notice.html" class="nav-link">Notice</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Pictogrammes</h1>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            <div class="supports-hero">
+                <div class="supports-hero-tag">Supports visuels</div>
+                <p>Pour les publics Alpha / A1.1, l'image remplace avantageusement l'écrit. Un pictogramme bien choisi permet d'évaluer la compréhension, de structurer une séance et de créer un environnement rassurant sans passer par la lecture.</p>
+            </div>
+
+            <div class="supports-section">
+                <div class="supports-section-tag">2 sources gratuites</div>
+                <div class="card-list">
+
+                    <div class="resource-card">
+                        <div class="card-icon ic-fp">FP</div>
+                        <div class="card-content">
+                            <div class="card-title">Freepik — Pictogrammes communication</div>
+                            <span class="card-tag tag-fp">Design &amp; icônes</span>
+                            <p class="card-desc">Très grande bibliothèque de pictogrammes et icônes sur le thème de la communication. Téléchargeables en PNG ou SVG, personnalisables en couleur. Recherche filtrée sur "Pictogrammes communication".</p>
+                            <a class="btn-primary" href="https://fr.freepik.com/search?format=search&last_filter=selection&last_value=1&query=Pictogrammes+communication&selection=1" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Accéder à Freepik
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="card-icon ic-fal">FAL</div>
+                        <div class="card-content">
+                            <div class="card-title">Fondation Autisme Luxembourg — Pictogrammes</div>
+                            <span class="card-tag tag-fal">Communication alternative</span>
+                            <p class="card-desc">Bibliothèque de pictogrammes dédiée à la communication alternative et augmentative (CAA). Particulièrement adaptée aux situations de la vie quotidienne : alimentation, santé, émotions, lieux. Accès gratuit et libre de droits.</p>
+                            <a class="btn-primary" href="https://www.fal.lu/ressources-outils/pictogrammes/procurer/" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Accéder aux pictogrammes FAL
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="supports-quote">
+                <blockquote>« Le bon support, c'est celui qui disparaît derrière la relation. Il donne confiance, puis s'efface. »</blockquote>
+                <cite>Approche actionnelle — Fondation de l'Armée du Salut</cite>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>contact@khairdidact.com</p>
+                    <p>+33 7 67 47 04 94</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul><li><a href="../notice.html">Notice du Site</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Communauté</h3>
+                    <a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener" style="color: #FFFFFF;">
+                        Rejoindre la communauté WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fondation Armée du Salut - Formateurs de Français</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
