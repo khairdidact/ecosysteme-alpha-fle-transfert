@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaClé ALPHA — Méthode d'alphabétisation recommandée</title>
     <meta name="description" content="Méthode rapide d'alphabétisation pour adultes, éditée par Retz/ScoLibris. Recommandée par la Fondation de l'Armée du Salut.">
-    <link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css">
-    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/ecosysteme-alpha-fle/assets/css/style.css">
+    <link rel="icon" href="/ecosysteme-alpha-fle/assets/images/favicon.ico">
     <style>
         /* Styles spécifiques à la page MaClé ALPHA (fusionnés et adaptés) */
         * {
@@ -502,8 +502,8 @@
 <body>
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="navbar-container">
-            <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
-                <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
+            <a href="/ecosysteme-alpha-fle/" class="navbar-logo" aria-label="Accueil">
+                <img src="/ecosysteme-alpha-fle/assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
                 <span class="navbar-title">Formateurs de Français</span>
                 <span class="navbar-subtitle">Fondation Armée du Salut</span>
             </a>
@@ -512,34 +512,34 @@
             </button>
             <ul class="navbar-menu" id="navbar-menu">
                 <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a>
+                    <a href="/ecosysteme-alpha-fle/" class="nav-link">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
+                    <a href="/ecosysteme-alpha-fle/pages/agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
                     <ul class="nav-submenu">
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                        <li><a href="/ecosysteme-alpha-fle/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                        <li><a href="/ecosysteme-alpha-fle/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
                 <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Employer une méthode</a>
+                    <a href="/ecosysteme-alpha-fle/pages/employer-une-methode/" class="nav-link">Employer une méthode</a>
                 </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes locales</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours durables</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/supports-telechargeables/" class="nav-link">Supports</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/sites-utiles/" class="nav-link">Sites utiles</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/mallettes-locales/" class="nav-link">Mallettes locales</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/parcours-durables.html" class="nav-link">Parcours durables</a></li>
                 <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a>
+                    <a href="/ecosysteme-alpha-fle/pages/evaluer/" class="nav-link">Évaluer</a>
                     <ul class="nav-submenu">
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/cecrl.html">CECRL</a></li>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                        <li><a href="/ecosysteme-alpha-fle/pages/evaluer/cecrl.html">CECRL</a></li>
+                        <li><a href="/ecosysteme-alpha-fle/pages/evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S'informer</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/sinformer.html" class="nav-link">S'informer</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/se-former.html" class="nav-link">Se former</a></li>
+                <li class="nav-item"><a href="/ecosysteme-alpha-fle/pages/notice.html" class="nav-link">Notice</a></li>
             </ul>
         </div>
     </nav>
@@ -575,7 +575,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             Voir sur Retz.com
                         </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank">
+                        <a class="btn-outline" href="https://scolibris.fr" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             ScoLibris
                         </a>
@@ -595,7 +595,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             Voir sur Retz.com
                         </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank">
+                        <a class="btn-outline" href="https://scolibris.fr" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             ScoLibris
                         </a>
@@ -662,7 +662,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
                     </div>
                     <div class="feat-title">Support audio inclus</div>
-                    <div class="feat-desc">CD audio + fichiers MP3 téléchargeables. Les dialogues sont enregistrés pour un travail oral authentique.</div>
+                    <div class="feat-desc">CD lexion + fichiers MP3 téléchargeables. Les dialogues sont enregistrés pour un travail oral authentique.</div>
                 </div>
                 <div class="feat">
                     <div class="feat-icon" style="background:#dcfce7;">
@@ -721,7 +721,7 @@
             <div class="public-block">
                 <h3>MaClé ALPHA est idéale pour accompagner :</h3>
                 <div class="public-list">
-                    <div class="public-item">Les adultes migrants non ou peu scolarisés dans leur langue d'origine</div>
+                    <div class="public-item">Les adultes migrants non ou peu scolararisés dans leur langue d'origine</div>
                     <div class="public-item">Les groupes hétérogènes en alphabétisation ou FLE débutant</div>
                     <div class="public-item">Les personnes en parcours d'intégration (Contrat d'Intégration Républicaine — CIR)</div>
                     <div class="public-item">Les apprenants qui préparent le DILF ou visent le niveau A1.1</div>
@@ -759,7 +759,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         Cahier d'écriture — Éditions Retz
                     </a>
-                    <a class="btn-white-outline" href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank">
+                    <a class="btn-white-outline" href="https://khairdidact.github.io/ecosysteme-alpha-fle/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Voir les Ressources MaClé Alpha
                     </a>
@@ -779,7 +779,7 @@
                 <div class="footer-col">
                     <h3>Liens utiles</h3>
                     <ul>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du Site</a></li>
+                        <li><a href="/ecosysteme-alpha-fle/pages/notice.html">Notice du Site</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -795,6 +795,6 @@
         </div>
     </footer>
 
-    <script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script>
+    <script src="/ecosysteme-alpha-fle/assets/js/main.js" defer></script>
 </body>
 </html>

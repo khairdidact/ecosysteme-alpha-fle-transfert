@@ -1,12 +1,1 @@
-Contrôle réalisé le 27/06/2026
-
-Corrections appliquées :
-- Tous les chemins internes pointent vers /ecosysteme-alpha-fle-transfert/.
-- Aucun lien interne manquant détecté dans les fichiers HTML.
-- Liens externes principaux vérifiés :
-  * https://www.armeedusalut.fr/
-  * https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html
-  * https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html
-  * https://www.scolibris.fr/macle-alpha/
-
-Remarque : le lien WhatsApp dépend de la validité de l'invitation du groupe.
+All internal absolute links checked successfully.
