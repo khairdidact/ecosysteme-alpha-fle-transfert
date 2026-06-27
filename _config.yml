@@ -1,6 +1,6 @@
 # Configuration Jekyll (optionnel)
 title: "Formateurs de Français - Armée du Salut"
 description: "Les outils essentiels pour conduire des apprentissages solidaires"
-baseurl: "/ecosysteme-alpha-fle-transfert"   # laisser vide si le dépôt est votre-utilisateur.github.io
-url: "https://khairdidact.github.io"
+baseurl: ""   # liens HTML rendus relatifs pour GitHub Pages
+url: "https://votre-utilisateur.github.io"
 lang: fr

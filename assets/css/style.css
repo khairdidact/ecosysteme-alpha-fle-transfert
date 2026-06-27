@@ -399,99 +399,220 @@ a:hover, a:focus { color: #C6286D; }
     .card-grid { grid-template-columns: 1fr; }
     .navbar-title { font-size: 1rem; }
 }
-/* ==========================================================
-   Patch non destructif 2026-06 : harmonisation + responsive
-   Conserve les contenus et les classes existantes.
-   ========================================================== */
+
+/* ========================================
+   COUCHE D'HARMONISATION VISUELLE 2026
+   Objectif : conserver contenus/assets, uniformiser espacements,
+   alignements, boutons et lisibilite.
+   ======================================== */
 :root {
-  --fas-blue: #1a3a5c;
-  --fas-blue-dark: #10263d;
-  --fas-orange: #e8540a;
-  --fas-gold: #fac775;
-  --fas-cream: #f7f2e9;
-  --fas-paper: #fffdf8;
-  --fas-border: #ded6ca;
-  --fas-text: #1c1c1a;
-  --fas-muted: #625f59;
-  --fas-shadow: 0 14px 34px rgba(16, 38, 61, 0.12);
+    --ads-bordeaux: #7F1146;
+    --ads-bordeaux-dark: #4B0A29;
+    --ads-rose: #C12872;
+    --ads-rose-dark: #8E1851;
+    --ads-ink: #212121;
+    --ads-muted: #555555;
+    --ads-soft: #F7F2F5;
+    --ads-white: #FFFFFF;
+    --ads-green: #0F7A3D;
+    --ads-orange: #9A4100;
+    --ads-blue: #145DA0;
+    --radius-card: 14px;
+    --radius-button: 999px;
+    --space-page-y: clamp(2.5rem, 5vw, 4.5rem);
+    --space-card: clamp(1rem, 2vw, 1.5rem);
 }
-html { scroll-behavior: smooth; }
-body { overflow-x: hidden; }
-img, iframe, video, embed { max-width: 100%; }
-iframe, video, embed { border: 0; }
-.navbar { position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 14px rgba(16, 38, 61, .10); }
-.navbar-container { gap: .75rem; }
-.navbar-logo { min-width: 0; }
-.navbar-title, .navbar-subtitle { overflow-wrap: anywhere; }
-.navbar-menu { align-items: stretch; }
-.nav-link, .nav-submenu a { line-height: 1.25; }
-.card, .content-card, .tool-card, .book-card, .resource-card, .method-card, .info-card, .value-card, .feature-card, .game-card, .activity-card, .site-card, .download-card {
-  border-radius: 18px;
-  box-shadow: var(--fas-shadow);
-  transition: transform .18s ease, box-shadow .18s ease;
+
+html { overflow-x: hidden; }
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
-.card:hover, .content-card:hover, .tool-card:hover, .book-card:hover, .resource-card:hover, .method-card:hover, .info-card:hover, .value-card:hover, .feature-card:hover, .game-card:hover, .activity-card:hover, .site-card:hover, .download-card:hover {
-  transform: translateY(-2px);
+
+main, .container, .section, .content-section, .page-header, .supports-section,
+.theme-section, .cta-block, .quote-section, .help-section {
+    overflow-wrap: anywhere;
 }
-a:not(.nav-link):not(.navbar-logo):not(.navbar-foundation-link):not(.btn):not([class*='btn']):not(.card-link) { text-underline-offset: 3px; }
-.btn, [class*='btn-'], .btn-primary, .btn-outline, .btn-main, .btn-white, .btn-white-outline {
-  min-height: 42px;
-  align-items: center;
-  justify-content: center;
-  white-space: normal;
+
+p, li, .card-desc, .ressource-desc, .supports-card-desc, .ref-desc, .tool-desc,
+.method-body, .section-intro, .hero-subtitle, .subtitle {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 }
-.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-table { max-width: 100%; }
-pre, code { white-space: pre-wrap; overflow-wrap: anywhere; }
-.hero { background-size: cover; background-position: center; }
-.hero-title, h1, h2, h3 { overflow-wrap: anywhere; }
-.card-grid, .grid, .features, .books-grid, .resource-grid, .tools-grid, .activities-grid, .sites-grid, .downloads-grid, .footer-grid {
-  min-width: 0;
+
+h1, h2, h3, h4, h5, h6, .page-title, .hero-title, .section-title,
+.card-title, .supports-card-title, .theme-title, .tool-name, .ref-name,
+.ressource-nom, .method-num, .step-title {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
-.card-image { object-fit: cover; }
-@media (max-width: 1100px) {
-  .navbar-container { flex-wrap: wrap; }
-  .navbar-menu { width: 100%; }
+
+.container { width: min(100%, 1200px); }
+.section, .content-section, .supports-section { padding-block: var(--space-page-y); }
+.section-title { margin-bottom: clamp(1.75rem, 3vw, 2.75rem); }
+
+.navbar-container {
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
-@media (max-width: 900px) {
-  .navbar-toggle { display: inline-flex; }
-  .navbar-menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    padding: .75rem 0 1rem;
-    background: inherit;
-  }
-  .navbar-menu.active, .navbar-menu.is-open, body.menu-open .navbar-menu { display: flex; }
-  .nav-item { width: 100%; }
-  .nav-link { display: flex; justify-content: space-between; width: 100%; padding: .85rem 1rem; }
-  .nav-submenu {
-    position: static !important;
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border-radius: 12px;
-    margin: 0 .75rem .5rem;
-    padding: .25rem;
-  }
-  .nav-submenu a { padding: .7rem .9rem; }
-  .hero { min-height: 320px; padding: 3rem 1rem; }
-  .hero-title { font-size: clamp(2rem, 8vw, 4rem); }
-  .section, .content-section, main { padding-left: 1rem; padding-right: 1rem; }
-  .card-grid, .features, .books-grid, .resource-grid, .tools-grid, .activities-grid, .sites-grid, .downloads-grid, .footer-grid {
-    grid-template-columns: 1fr !important;
-  }
+.navbar-logo { flex: 0 1 auto; min-width: 220px; }
+.navbar-title { line-height: 1.15; text-wrap: balance; }
+.navbar-menu {
+    align-items: center;
+    justify-content: flex-end;
+    row-gap: .25rem;
 }
-@media (max-width: 560px) {
-  .navbar-container { padding-left: .85rem; padding-right: .85rem; }
-  .logo-img { max-width: 48px; height: auto; }
-  .navbar-title { font-size: 1rem; }
-  .navbar-foundation-link { width: 100%; text-align: center; }
-  .hero { min-height: 260px; }
-  .hero-subtitle { font-size: 1.05rem; }
-  .section-title { font-size: clamp(1.45rem, 7vw, 2rem); }
-  .card-content, .content-card, .tool-card, .book-card, .resource-card, .method-card, .info-card, .value-card, .feature-card, .game-card, .activity-card, .site-card, .download-card { padding: 1rem; }
-  .btn, [class*='btn-'], .btn-primary, .btn-outline, .btn-main, .btn-white, .btn-white-outline { width: 100%; }
+.nav-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    line-height: 1.15;
+    text-align: center;
 }
+.nav-link:hover, .nav-link:focus {
+    background: rgba(255,255,255,.10);
+    color: #FFFFFF;
+    outline: 2px solid rgba(255,255,255,.55);
+    outline-offset: 2px;
+}
+.nav-submenu {
+    box-shadow: 0 12px 26px rgba(0,0,0,.25);
+}
+.nav-submenu a {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+.navbar-foundation-link {
+    color: #FFFFFF;
+    white-space: normal;
+    text-align: center;
+}
+
+.card-grid, .formations-grid, .tools-grid, .ressource-list,
+.supports-card-grid, .grille-body, .preview-row-data {
+    align-items: stretch;
+}
+.card, .resource-card, .formation-card, .tool-card, .ref-card,
+.supports-card, .usage-card, .grille-card, .mallette-card, .book-card,
+.step-card, .principle-item, .principe-item, .method-item, .ressource-item {
+    border-radius: var(--radius-card);
+    overflow-wrap: break-word;
+}
+.card-content, .resource-card, .formation-card, .tool-card, .ref-card,
+.supports-card, .usage-card, .grille-card, .mallette-card, .book-card,
+.step-card, .method-item, .ressource-item {
+    padding: var(--space-card);
+}
+.card-content { display: flex; flex-direction: column; align-items: center; gap: .9rem; }
+.card-content .card-link { margin-top: auto; }
+
+.btn, .btn-primary, .btn-outline, .btn-custom, .btn-dl, .btn-main,
+.btn-ia, .btn-green, .btn-orange, .btn-white-outline, .btn-formation,
+.btn-ressource, .supports-btn, .tool-btn, .ref-link, .card-link,
+.inline-link, .filter-btn, .copy-btn, .btn--whatsapp {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    min-height: 44px;
+    max-width: 100%;
+    padding: .72rem 1.15rem;
+    border-radius: var(--radius-button);
+    border: 2px solid transparent;
+    text-align: center;
+    line-height: 1.18;
+    font-family: 'PT Sans', 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    text-decoration: none !important;
+    white-space: normal;
+    text-wrap: balance;
+    vertical-align: middle;
+}
+
+.btn, .btn-primary, .btn-main, .btn-ia, .btn-formation,
+.btn-ressource, .supports-btn, .tool-btn, .ref-link, .card-link,
+.filter-btn, .copy-btn {
+    background-color: var(--ads-bordeaux) !important;
+    color: var(--ads-white) !important;
+}
+.btn:hover, .btn-primary:hover, .btn-main:hover, .btn-ia:hover,
+.btn-formation:hover, .btn-ressource:hover, .supports-btn:hover,
+.tool-btn:hover, .ref-link:hover, .card-link:hover, .filter-btn:hover,
+.copy-btn:hover {
+    background-color: var(--ads-bordeaux-dark) !important;
+    color: var(--ads-white) !important;
+}
+.btn-outline {
+    background-color: var(--ads-white) !important;
+    color: var(--ads-bordeaux-dark) !important;
+    border-color: var(--ads-bordeaux) !important;
+}
+.btn-outline:hover {
+    background-color: var(--ads-bordeaux) !important;
+    color: var(--ads-white) !important;
+}
+.btn-green { background-color: var(--ads-green) !important; color: #FFFFFF !important; }
+.btn-orange { background-color: var(--ads-orange) !important; color: #FFFFFF !important; }
+.btn-white-outline {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border-color: rgba(255,255,255,.9) !important;
+}
+.btn-white-outline:hover { background: #FFFFFF !important; color: var(--ads-bordeaux-dark) !important; }
+.inline-link {
+    min-height: 0;
+    padding: .05rem .35rem;
+    border-radius: .4rem;
+    background: transparent !important;
+    color: var(--ads-bordeaux-dark) !important;
+    border: 0;
+    text-decoration: underline !important;
+    font-weight: 700;
+}
+.btn--whatsapp { background-color: #128C44 !important; color: #FFFFFF !important; }
+.btn--whatsapp:hover { background-color: #0B6D35 !important; color: #FFFFFF !important; }
+
+.btn-group, .card-footer, .book-footer, .supports-card-footer,
+.ressource-lien, .footer-col, .cta-block, .help-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: center;
+}
+.btn-group, .card-footer, .book-footer, .supports-card-footer,
+.ressource-lien { justify-content: center; }
+
+.footer-grid { align-items: start; }
+.footer-col { flex-direction: column; align-items: flex-start; }
+.footer a { color: #FFB6D9; }
+.footer .btn--whatsapp { color: #FFFFFF; }
+.footer-bottom { line-height: 1.5; }
+
+iframe, video, embed, object { max-width: 100%; border-radius: 12px; }
+img { max-width: 100%; height: auto; }
+
+@media (max-width: 980px) {
+    .navbar-container { justify-content: center; }
+    .navbar-logo { min-width: 0; justify-content: center; }
+    .navbar-menu { justify-content: center; width: 100%; }
+    .navbar-foundation-link { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+    .navbar-container { justify-content: space-between; }
+    .navbar-menu { align-items: stretch; padding: .5rem 0; }
+    .nav-link { width: 100%; justify-content: flex-start; border-radius: 10px; }
+    .nav-submenu a { padding-left: 1.5rem; }
+    .btn, .btn-primary, .btn-outline, .btn-custom, .btn-dl, .btn-main,
+    .btn-ia, .btn-green, .btn-orange, .btn-white-outline, .btn-formation,
+    .btn-ressource, .supports-btn, .tool-btn, .ref-link, .card-link,
+    .filter-btn, .copy-btn, .btn--whatsapp { width: 100%; }
+    .footer-col { align-items: stretch; }
+}
+
