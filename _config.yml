@@ -1,8 +1,8 @@
-# Configuration Jekyll / GitHub Pages
+# Configuration Jekyll (optionnel)
 title: "Formateurs de Français - Armée du Salut"
 description: "Les outils essentiels pour conduire des apprentissages solidaires"
-baseurl: "/ecosysteme-alpha-fle"
 url: "https://khairdidact.github.io"
+baseurl: "/ecosysteme-alpha-fle-transfert"
 lang: fr
 markdown: kramdown
 permalink: pretty

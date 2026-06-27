@@ -1,40 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('navbar-menu');
-
-  function closeMenu(){
-    if (!toggle || !menu) return;
-    menu.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!menu.classList.contains('is-open')) return;
-      if (menu.contains(event.target) || toggle.contains(event.target)) return;
-      closeMenu();
-    });
-
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        if (window.matchMedia('(max-width: 980px)').matches) closeMenu();
-      });
-    });
-  }
-
-  document.querySelectorAll('a[href^="http"]').forEach((a) => {
-    a.target = a.target || '_blank';
-    const rel = new Set((a.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
-    rel.add('noopener');
-    a.setAttribute('rel', Array.from(rel).join(' '));
-  });
+document.addEventListener('DOMContentLoaded',()=>{
+  const toggle=document.getElementById('menu-toggle');
+  const menu=document.getElementById('navbar-menu');
+  if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});}
+  document.querySelectorAll('a[href^="http"]').forEach(a=>{ if(!a.rel) a.rel='noopener'; });
 });
+
+// Patch responsive non destructif : menu mobile robuste
+(function(){
+  const toggle=document.getElementById('menu-toggle');
+  const menu=document.getElementById('navbar-menu');
+  if(!toggle||!menu) return;
+  function closeMenu(){menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');}
+  toggle.addEventListener('click',function(ev){ev.stopPropagation();const open=menu.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});
+  document.addEventListener('click',function(ev){if(!menu.contains(ev.target)&&!toggle.contains(ev.target)) closeMenu();});
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape') closeMenu();});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+})();

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,10 +7,499 @@
     <title>MaClé ALPHA — Méthode d'alphabétisation recommandée</title>
     <meta name="description" content="Méthode rapide d'alphabétisation pour adultes, éditée par Retz/ScoLibris. Recommandée par la Fondation de l'Armée du Salut.">
     <link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css">
-    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.ico">
+    <style>
+        /* Styles spécifiques à la page MaClé ALPHA (fusionnés et adaptés) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Georgia, serif;
+            background: #f4f1eb;
+            color: #1c1c1a;
+        }
+        .hero {
+            background: #1a3a5c;
+            color: white;
+            padding: 52px 40px;
+            text-align: center;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #e8540a;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 99px;
+            margin-bottom: 16px;
+            font-family: sans-serif;
+        }
+        .hero h1 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 14px;
+            opacity: 0.82;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-family: sans-serif;
+        }
+        .section {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 44px 32px;
+        }
+        .section-tag {
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e8540a;
+            font-family: sans-serif;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #1a3a5c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .alert {
+            background: #fff8e8;
+            border-left: 4px solid #e8540a;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #633806;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .alert strong {
+            color: #1a3a5c;
+            display: block;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .book-card {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-header {
+            padding: 20px 22px 16px;
+        }
+        .book-level {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 99px;
+            background: #fee2e2;
+            color: #991b1b;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+        }
+        .book-type {
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #e8540a;
+            font-family: sans-serif;
+            margin-bottom: 6px;
+        }
+        .book-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #1a3a5c;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+        .book-author {
+            font-size: 12px;
+            color: #6b6b67;
+            font-family: sans-serif;
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+        .book-desc {
+            font-size: 13px;
+            color: #444441;
+            font-family: sans-serif;
+            line-height: 1.6;
+            flex: 1;
+        }
+        .book-footer {
+            padding: 16px 22px;
+            border-top: 1px solid #e8e4de;
+            background: #f8f6f2;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #1a3a5c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: background 0.15s;
+        }
+        .btn-primary:hover {
+            background: #e8540a;
+        }
+        .btn-primary svg {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: white;
+            color: #1a3a5c;
+            border: 1.5px solid #1a3a5c;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: all 0.15s;
+        }
+        .btn-outline:hover {
+            background: #1a3a5c;
+            color: white;
+        }
+        .btn-outline svg {
+            width: 13px;
+            height: 13px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .feat {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .feat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .feat-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+        .feat-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #1a3a5c;
+            font-family: sans-serif;
+            margin-bottom: 5px;
+        }
+        .feat-desc {
+            font-size: 12px;
+            color: #6b6b67;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+        .acronym-block {
+            background: #1a3a5c;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin-bottom: 32px;
+        }
+        .acronym-block h3 {
+            font-size: 15px;
+            color: #FAC775;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .acronym-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .acronym-letter {
+            width: 32px;
+            height: 32px;
+            background: #e8540a;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: sans-serif;
+            flex-shrink: 0;
+        }
+        .acronym-text strong {
+            font-size: 13px;
+            color: white;
+            font-family: sans-serif;
+            display: block;
+        }
+        .acronym-text span {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: sans-serif;
+        }
+        .public-block {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 32px;
+        }
+        .public-block h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a3a5c;
+            font-family: sans-serif;
+            margin-bottom: 12px;
+        }
+        .public-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .public-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #444441;
+            line-height: 1.5;
+        }
+        .public-item::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: #e8540a;
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+        .free-block {
+            background: #E1F5EE;
+            border: 1px solid #9FE1CB;
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 32px;
+        }
+        .free-block h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #085041;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .free-block h3 svg {
+            width: 16px;
+            height: 16px;
+        }
+        .free-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .free-item {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #085041;
+            line-height: 1.5;
+        }
+        .free-item::before {
+            content: "✓";
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Bloc Guide d'utilisation */
+        .usage-block {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 12px;
+            padding: 24px 26px;
+            margin-bottom: 32px;
+        }
+        .usage-block h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a3a5c;
+            font-family: sans-serif;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .usage-block h3 svg {
+            width: 18px;
+            height: 18px;
+        }
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .usage-card {
+            background: #f8f6f2;
+            border-radius: 10px;
+            padding: 16px;
+            font-family: sans-serif;
+        }
+        .usage-card-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #e8540a;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .usage-card-desc {
+            font-size: 12px;
+            color: #444441;
+            line-height: 1.5;
+        }
+        .usage-principle {
+            background: #fff8e8;
+            border-left: 4px solid #1a3a5c;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin-top: 16px;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #633806;
+            line-height: 1.6;
+        }
+        .usage-principle strong {
+            color: #1a3a5c;
+        }
+
+        .cta-block {
+            background: #e8540a;
+            border-radius: 14px;
+            padding: 28px 32px;
+            text-align: center;
+        }
+        .cta-block h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .cta-block p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: #e8540a;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: opacity 0.15s;
+        }
+        .btn-white:hover {
+            opacity: 0.9;
+        }
+        .btn-white svg {
+            width: 14px;
+            height: 14px;
+        }
+        .btn-white-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: all 0.15s;
+        }
+        .btn-white-outline:hover {
+            background: white;
+            color: #e8540a;
+        }
+        .btn-white-outline svg {
+            width: 14px;
+            height: 14px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #d1cdc4;
+            margin: 0 32px;
+        }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="navbar-container">
             <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
@@ -54,15 +544,15 @@
         </div>
     </nav>
 
-    <main id="contenu" class="content-section macle-page">
+    <main class="content-section">
         <!-- Le contenu spécifique MaClé ALPHA commence ici -->
-        <div class="hero hero--macle">
+        <div class="hero">
             <div class="hero-tag">Méthode recommandée — Alpha / A1.1</div>
             <h1>MaClé ALPHA</h1>
             <p>La méthode rapide d'alphabétisation pour adultes recommandée par la Fondation de l'Armée du Salut — éditions Retz / ScoLibris</p>
         </div>
 
-        <div class="section section--narrow">
+        <div class="section">
             <div class="alert">
                 <strong>Pourquoi cette méthode ?</strong>
                 MaClé ALPHA est conçue spécifiquement pour les adultes migrants de niveaux hétérogènes. Elle concilie acquisition de la lecture, préparation au niveau A1.1 du CECRL, et ancrage dans les situations réelles de la vie quotidienne. C'est la méthode que nous vous recommandons pour démarrer avec vos publics.
@@ -81,11 +571,11 @@
                         <p class="book-desc">Le manuel complet du formateur. Il contient des fiches téléchargeables détaillées, des exercices oraux à faire en classe, un tableau des contenus pédagogiques, les pistes audio du CD en version MP3 téléchargeables, ainsi qu'un sujet de DILF blanc complet. L'apprentissage est rendu concret et efficace grâce à la mise en situation à partir de dialogues de la vie quotidienne enregistrés sur CD et de documents authentiques. Les thématiques, en phase avec les prescriptions de l'OFII, permettent d'aborder les sons et leurs graphies dans une progression en spirale par des activités orales et écrites avant tout leur prouver.</p>
                     </div>
                     <div class="book-footer">
-                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank" rel="noopener">
+                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             Voir sur Retz.com
                         </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank" rel="noopener">
+                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             ScoLibris
                         </a>
@@ -101,11 +591,11 @@
                         <p class="book-desc">Ancré dans les besoins réels des adultes, ce cahier innovant propose d'apprendre rapidement et efficacement à écrire les mots les plus utiles et les plus fréquents, en s'appuyant sur des images réelles du quotidien. L'écriture scripte est privilégiée car c'est aujourd'hui la graphie scripte qui permet à l'apprenant de faire le lien entre ce qu'il lit et ce qu'il écrit. La priorité est de pouvoir rapidement écrire sur des imprimés fonctionnels (formulaires, enveloppes, etc.), qui requièrent une écriture scripte majuscule.</p>
                     </div>
                     <div class="book-footer">
-                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank" rel="noopener">
+                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             Voir sur Retz.com
                         </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank" rel="noopener">
+                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             ScoLibris
                         </a>
@@ -261,15 +751,15 @@
                 <h3>Accéder à la méthode</h3>
                 <p>Commandez les ouvrages directement sur le site des éditions Retz, ou consultez gratuitement toutes les ressources numériques associées sur ScoLibris.</p>
                 <div class="cta-buttons">
-                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank" rel="noopener">
+                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         Méthode — Éditions Retz
                     </a>
-                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank" rel="noopener">
+                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         Cahier d'écriture — Éditions Retz
                     </a>
-                    <a class="btn-white-outline" href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank" rel="noopener">
+                    <a class="btn-white-outline" href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Voir les Ressources MaClé Alpha
                     </a>
