@@ -1,0 +1,10 @@
+# Configuration Jekyll (optionnel)
+title: "Formateurs de Français - Armée du Salut"
+description: "Les outils essentiels pour conduire des apprentissages solidaires"
+baseurl: "/ecosysteme-alpha-fle"   # laisser vide si le dépôt est votre-utilisateur.github.io
+url: "https://votre-utilisateur.github.io"
+lang: fr
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
