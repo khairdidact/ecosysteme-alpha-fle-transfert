@@ -616,3 +616,213 @@ img { max-width: 100%; height: auto; }
     .footer-col { align-items: stretch; }
 }
 
+/* ===== CORRECTION DEFINITIVE BANDEAU SUPERIEUR 2026-06 =====
+   Objectif : logo + deux libelles complets, alignes et non comprimes.
+   A conserver en fin de fichier pour neutraliser les anciennes regles. */
+.navbar {
+    background-color: #212121;
+    color: #FFFFFF;
+}
+
+.navbar-container {
+    width: min(100%, 1560px);
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.8rem clamp(1rem, 2vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(1.25rem, 2.2vw, 2.5rem);
+    flex-wrap: nowrap;
+}
+
+.navbar-brand {
+    flex: 0 0 clamp(360px, 24vw, 430px);
+    min-width: clamp(360px, 24vw, 430px);
+    display: grid;
+    grid-template-columns: 74px minmax(260px, 1fr);
+    column-gap: 1.15rem;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    display: block;
+    flex: 0 0 auto;
+}
+
+.navbar-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    gap: 0.16rem;
+}
+
+.navbar-title,
+.navbar-foundation-link {
+    display: block;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0;
+    color: #FFFFFF !important;
+    font-family: 'PT Sans', 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
+    line-height: 1.18;
+}
+
+.navbar-title {
+    font-size: clamp(1.35rem, 1.45vw, 1.9rem) !important;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.navbar-foundation-link {
+    font-size: clamp(1.02rem, 1.05vw, 1.28rem) !important;
+    font-weight: 400;
+    border-bottom: 1px dotted rgba(255,255,255,0.55);
+}
+
+.navbar-title:hover,
+.navbar-title:focus,
+.navbar-foundation-link:hover,
+.navbar-foundation-link:focus {
+    color: #FFB6D9 !important;
+    border-bottom-color: #FFB6D9;
+    outline: none;
+}
+
+.navbar-menu {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem clamp(0.35rem, 0.75vw, 0.9rem);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0.62rem clamp(0.58rem, 0.7vw, 0.95rem);
+    border-radius: 999px;
+    color: #FFFFFF !important;
+    font-size: clamp(0.88rem, 0.78vw, 1rem);
+    line-height: 1.12;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: rgba(255,255,255,0.12);
+    color: #FFFFFF !important;
+    outline: 2px solid rgba(255,255,255,0.55);
+    outline-offset: 2px;
+}
+
+.nav-submenu a {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+@media (max-width: 1180px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-brand {
+        flex-basis: 100%;
+        min-width: 0;
+        width: 100%;
+        grid-template-columns: 70px minmax(0, auto);
+        justify-content: center;
+    }
+    .navbar-heading {
+        min-width: min(100%, 330px);
+    }
+    .navbar-menu {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .navbar-brand {
+        width: auto;
+        flex: 1 1 auto;
+        grid-template-columns: 56px minmax(0, 1fr);
+        justify-content: start;
+        column-gap: 0.75rem;
+    }
+    .logo-img {
+        width: 56px;
+        height: 56px;
+    }
+    .navbar-title,
+    .navbar-foundation-link {
+        white-space: normal;
+        text-wrap: balance;
+    }
+    .navbar-title {
+        font-size: 1.15rem !important;
+    }
+    .navbar-foundation-link {
+        font-size: 0.92rem !important;
+    }
+    .navbar-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0.75rem 0 0;
+        gap: 0.35rem;
+        background-color: #212121;
+    }
+    .navbar-menu.active {
+        display: flex;
+    }
+    .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+        border-radius: 10px;
+        white-space: normal;
+    }
+}
