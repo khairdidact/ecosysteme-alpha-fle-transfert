@@ -1,27 +1,604 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Valoriser le progrès</title><meta name="description" content="Donner envie de continuer en rendant les avancées visibles."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css"><link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#contenu">Aller au contenu</a>
-<nav class="navbar" role="navigation" aria-label="Navigation principale">
-  <div class="navbar-container">
-    <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
-      <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Emblème pédagogique inspiré des couleurs de la Fondation" class="logo-img">
-      <span><span class="navbar-title">Formateurs de Français</span><span class="navbar-subtitle">Fondation Armée du Salut</span></span>
-    </a>
-    <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
-    <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle"><span class="hamburger"></span></button>
-    <ul class="navbar-menu" id="navbar-menu">
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Valeurs</a><ul class="nav-submenu"><li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li><li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li></ul></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Groupe</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Méthodes</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S’informer</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
-    </ul>
-  </div>
-</nav><main id="contenu"><header class="page-hero"><div class="container"><div class="breadcrumb"><a href="/ecosysteme-alpha-fle-transfert/">Accueil</a> · Valoriser le progrès</div><h1>Valoriser le progrès</h1><p>Donner envie de continuer en rendant les avancées visibles.</p></div></header><section class="section"><div class="container"><div class="panel"><ul class="list-check"><li>Photographier une production avec accord.</li><li>Tenir une fiche de réussites.</li><li>Faire verbaliser : « aujourd’hui je sais… »</li><li>Éviter les comparaisons entre apprenants.</li></ul></div></div></section></main>
-<footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div><h3>Contact</h3><p>contact@khairdidact.com</p><p>+33 7 67 47 04 94</p></div><div><h3>Liens utiles</h3><p><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du site</a></p><p><a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener">Site officiel de la Fondation</a></p></div><div><h3>Communauté</h3><a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener">Rejoindre la communauté WhatsApp</a></div></div><div class="footer-bottom"><p>© 2026 — Site pédagogique gratuit de soutien aux formateurs bénévoles de français. Projet non commercial.</p></div></div></footer><script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script></body></html>
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoriser le progrès - Formateurs FLE Armée du Salut</title>
+    <meta name="description" content="Comment reconnaître et encourager chaque avancée, même modeste.">
+    <link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css">
+    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.ico">
+    <!-- Styles spécifiques à la page Valoriser le progrès (issus du corps) -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; background: #f4f1eb; color: #1c1c1a; }
+
+        .hero-intro {
+            background: #1a3a5c;
+            color: white;
+            padding: 40px 32px;
+            text-align: center;
+            margin-bottom: 32px;
+            border-radius: 0 0 14px 14px;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #e8540a;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 99px;
+            margin-bottom: 12px;
+            font-family: sans-serif;
+        }
+        .hero-intro p {
+            font-size: 15px;
+            opacity: 0.82;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-family: sans-serif;
+        }
+
+        .alert {
+            background: #fff8e8;
+            border-left: 4px solid #e8540a;
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            max-width: 760px;
+            margin: 32px auto;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #633806;
+            line-height: 1.6;
+        }
+        .alert strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #1a3a5c;
+        }
+
+        .section {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px 32px;
+        }
+        .section-tag {
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e8540a;
+            font-family: sans-serif;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 22px;
+            color: #1a3a5c;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .section-intro {
+            font-size: 14px;
+            color: #6b6b67;
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 580px;
+            margin-bottom: 24px;
+        }
+
+        .phase-block { margin-bottom: 40px; }
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #d1cdc4;
+        }
+        .phase-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .phase-icon svg { width: 20px; height: 20px; }
+        .icon-accueil { background: #E1F5EE; }
+        .icon-suivi { background: #EEEDFE; }
+        .icon-competence { background: #FAEEDA; }
+        .phase-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a3a5c;
+            font-family: sans-serif;
+        }
+        .phase-subtitle {
+            font-size: 12px;
+            color: #6b6b67;
+            font-family: sans-serif;
+            margin-top: 2px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        .tool-card {
+            background: white;
+            border: 1px solid #d1cdc4;
+            border-radius: 12px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tool-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a3a5c;
+            font-family: sans-serif;
+        }
+        .tool-punch {
+            font-size: 12px;
+            color: #e8540a;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .tool-desc {
+            font-size: 13px;
+            color: #6b6b67;
+            font-family: sans-serif;
+            line-height: 1.5;
+            flex: 1;
+        }
+        .tool-tip {
+            font-size: 12px;
+            background: #f4f1eb;
+            border-radius: 6px;
+            padding: 8px 10px;
+            color: #444441;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+        .tool-tip strong { color: #1a3a5c; }
+        .tool-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #1a3a5c;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: sans-serif;
+            margin-top: 4px;
+            transition: background 0.15s;
+        }
+        .tool-btn:hover { background: #e8540a; }
+        .tool-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+        .tool-btn-outline {
+            background: white;
+            color: #1a3a5c;
+            border: 1.5px solid #1a3a5c;
+        }
+        .tool-btn-outline:hover {
+            background: #1a3a5c;
+            color: white;
+        }
+
+        .conseil-block {
+            background: #1a3a5c;
+            color: white;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 0 32px 40px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .conseil-block h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #FAC775;
+            font-family: sans-serif;
+        }
+        .conseil-block p {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.9;
+            font-family: sans-serif;
+        }
+        .conseil-block .highlight {
+            background: rgba(232,84,10,0.25);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-weight: bold;
+        }
+
+        .recap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 32px 48px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #d1cdc4;
+            font-family: sans-serif;
+            font-size: 13px;
+        }
+        thead tr { background: #1a3a5c; color: white; }
+        th { padding: 12px 16px; text-align: left; font-weight: bold; }
+        td { padding: 12px 16px; border-bottom: 0.5px solid #d1cdc4; color: #1c1c1a; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        .badge-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 9px;
+            border-radius: 99px;
+        }
+        .tag-pos { background: #E1F5EE; color: #085041; }
+        .tag-app { background: #EEEDFE; color: #3C3489; }
+        .tag-comp { background: #FAEEDA; color: #633806; }
+        .tag-auto { background: #FAECE7; color: #712B13; }
+
+        .quote-section {
+            background: #e8540a;
+            padding: 44px 32px;
+            text-align: center;
+        }
+        .quote-section blockquote {
+            font-size: 18px;
+            font-style: italic;
+            color: white;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .quote-section cite {
+            display: block;
+            font-size: 12px;
+            color: rgba(255,255,255,0.75);
+            font-style: normal;
+            font-family: sans-serif;
+            margin-top: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #d1cdc4;
+            margin: 0 32px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="navbar-container">
+        <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
+            <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
+            <span class="navbar-title">Formateurs de Français</span>
+        </a>
+        <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
+        <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Employer une méthode</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/pictos.html">Pictos</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/planches.html">Planches</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/activites.html">Activités</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/jouer-en-ligne.html">Jouer en ligne</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/creer-ses-applis.html">Créer ses applis</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes locales</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/methode-macle-alpha.html">Méthode MaClé Alpha</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html">Ressources MaClé Alpha</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/jeux-de-societe.html">Jeux de société</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours durables</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/cecrl.html">CECRL</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S'informer</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Valoriser le progrès</h1>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <!-- Introduction visuelle issue du corps (sans redondance de titre) -->
+        <div class="hero-intro">
+            <div class="hero-tag">Boîte à outils</div>
+            <p>Outils d'évaluation adaptés aux publics en grande précarité ou en situation de migration — à l'usage des formateurs bénévoles</p>
+        </div>
+
+        <div style="max-width:760px;margin:0 auto;padding:0 32px 32px;">
+            <div class="alert">
+                <strong>Le principe fondateur</strong>
+                Pour ces publics, l'évaluation ne doit jamais ressembler à un examen scolaire — souvent associé à l'échec et à la honte. Elle doit être un <strong>outil de valorisation et de visibilité des progrès</strong>. L'objectif : rendre l'apprenant acteur de sa progression.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-tag">3 temps pédagogiques</div>
+            <div class="section-title">Les outils selon le moment</div>
+            <p class="section-intro">Chaque outil est choisi selon où en est l'apprenant dans son parcours. Positionnement à l'accueil, suivi en cours de formation, évaluation des compétences acquises.</p>
+
+            <!-- PHASE 1 -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-icon icon-accueil">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <div class="phase-title">1. Positionnement — L'accueil</div>
+                        <div class="phase-subtitle">Identifier les besoins immédiats sans créer de stress</div>
+                    </div>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-name">Le Blason de compétences</div>
+                        <div class="tool-punch">Graphique, valorisant, direct</div>
+                        <div class="tool-desc">Support visuel divisé en 4 zones : ce que je sais faire, mes langues, mes objectifs, mes centres d'intérêt. Pas d'écrit obligatoire, pas de notation.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Imprimez le blason sur A4, laissez l'apprenant dessiner ou coller des images. Dure 15 min et dit tout.</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">EVAlang</div>
+                        <div class="tool-punch">Moderne, court, résultat immédiat</div>
+                        <div class="tool-desc">Test adaptatif en ligne, environ 30 min. Pour les publics très précaires, préférez la tablette — l'objet technologique est lui-même valorisant.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Faites-le ensemble la première fois. La tablette rassure et dédramatise.</div>
+                        <a class="tool-btn" href="https://www.france-education-international.fr/evalang?langue=fr#">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Accéder à EVAlang
+                        </a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">L'entretien par l'image</div>
+                        <div class="tool-punch">Empathique, oral, sans jugement</div>
+                        <div class="tool-desc">Le Photolangage : l'apprenant choisit une image qui représente sa situation face à la langue. Évalue l'oral de manière détournée.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Imprimez 15–20 photos variées (villes, visages, situations). Laissez choisir librement.</div>
+                        <a class="tool-btn" href="https://communagir.org/contenus-et-outils/communagir-pour-emporter/les-outils-d-animation/photolangage/#:~:text=Le%20Photolangage%C2%AE1%20est,un%20contexte%20d'intervention%20psychosociale." target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Découvrir Photolangage
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 2 -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-icon icon-suivi">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <div>
+                        <div class="phase-title">2. Suivi des apprentissages</div>
+                        <div class="phase-subtitle">Rendre l'apprenant acteur de sa progression</div>
+                    </div>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-name">Kahoot!</div>
+                        <div class="tool-punch">L'adrénaline du jeu et du score en direct</div>
+                        <div class="tool-desc">Quiz sur smartphone. La compétition ludique et la musique créent une dynamique de groupe très forte. Incontournable pour le côté "punchy".</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Créez des questions sur le vocabulaire du quotidien : transports, santé, courses. Gardez 5–8 questions maximum.</div>
+                        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                            <a class="tool-btn" href="https://kahoot.com" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Kahoot!
+                            </a>
+                            <a class="tool-btn tool-btn-outline" href="https://qruiz.net/" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Qruiz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">La Cible d'auto-évaluation</div>
+                        <div class="tool-punch">Visuel, immédiat, sans notation</div>
+                        <div class="tool-desc">Une cible dessinée au tableau. L'apprenant place une croix : plus proche du centre = plus à l'aise. Ex : "Prendre le bus", "Aller à la pharmacie".</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Faites-le en groupe : voir que les autres ont les mêmes difficultés dédramatise et crée de la solidarité.</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">Plickers</div>
+                        <div class="tool-punch">Zéro smartphone, zéro connexion requis</div>
+                        <div class="tool-desc">Les apprenants lèvent des cartons de réponse. Vous scannez avec votre seul téléphone. Personne ne voit la réponse des voisins — zéro pression sociale.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Idéal pour les groupes sans équipement. Le côté "magique" du scan impressionne et motive.</div>
+                        <a class="tool-btn" href="https://get.plickers.com" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Découvrir Plickers
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 3 -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-icon icon-competence">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    </div>
+                    <div>
+                        <div class="phase-title">3. Évaluation des compétences</div>
+                        <div class="phase-subtitle">Mesurer l'autonomie réelle, pas la grammaire</div>
+                    </div>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-name">Badges Numériques (Open Badges)</div>
+                        <div class="tool-punch">Transforme l'effort en trophée numérique</div>
+                        <div class="tool-desc">On "gagne" un badge pour des micro-compétences : "Je sais remplir un formulaire", "Je sais demander mon chemin". Reconnaissance concrète et très positive.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> La Fondation ePoc permet de créer vos propres badges. C'est ce que nous utilisons dans cette formation !</div>
+                        <a class="tool-btn" href="https://openbadgepassport.com/" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Open Badges
+                        </a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">Le Jeu de rôle "Mission"</div>
+                        <div class="tool-punch">On sort de la théorie pour le monde réel</div>
+                        <div class="tool-desc">Au lieu d'un test, un défi réel ou simulé. Ex : "Tu as 5 minutes pour acheter ce ticket de métro à la borne." On évalue la réussite de la tâche, pas la grammaire.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Filmez (avec accord) : revoir la vidéo ensemble est très valorisant pour l'apprenant.</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-name">Le Portfolio de réussites</div>
+                        <div class="tool-punch">On ne collectionne que les succès</div>
+                        <div class="tool-desc">Un dossier physique ou numérique où l'on ne range que ce qui est réussi : photos de sorties, premiers mots écrits, attestations. Aucune trace d'échec.</div>
+                        <div class="tool-tip"><strong>Conseil :</strong> Utilisez une pochette cartonnée colorée. L'objet lui-même devient un symbole de fierté.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- CONSEIL ADAPTÉ -->
+        <div style="max-width:760px;margin:0 auto;padding:36px 32px;">
+            <div class="conseil-block">
+                <h3>Le conseil Armée du Salut</h3>
+                <p>Pour ces publics, privilégiez toujours <span class="highlight">l'approche actionnelle</span> : l'évaluation doit porter sur <strong>"faire" quelque chose</strong> — réussir une démarche administrative, comprendre une consigne de sécurité — plutôt que sur <strong>"savoir"</strong> — conjuguer au présent.<br><br>
+                Cela redonne une <strong>dignité immédiate</strong> à l'apprenant et s'inscrit directement dans nos valeurs d'inconditionnalité et d'espérance.</p>
+            </div>
+        </div>
+
+        <!-- TABLEAU RÉCAPITULATIF -->
+        <div class="recap">
+            <div class="section-tag">Tableau de bord</div>
+            <div class="section-title" style="margin-bottom:16px;">Quel outil pour quel moment ?</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Outil</th>
+                        <th>Pourquoi c'est efficace</th>
+                        <th>Public prioritaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge-tag tag-pos">Positionnement</span></td>
+                        <td><strong>Photolangage</strong></td>
+                        <td>Brise la glace instantanément, évalue l'oral sans stress</td>
+                        <td>Tous publics à l'entrée</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tag tag-pos">Positionnement</span></td>
+                        <td><strong>Blason de compétences</strong></td>
+                        <td>Valorise les acquis dès le départ, crée la confiance</td>
+                        <td>Personnes très précaires</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tag tag-app">Apprentissage</span></td>
+                        <td><strong>Kahoot! / Qruiz</strong></td>
+                        <td>L'adrénaline du jeu, dynamique de groupe forte</td>
+                        <td>Groupes avec smartphones</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tag tag-app">Apprentissage</span></td>
+                        <td><strong>Plickers</strong></td>
+                        <td>Zéro équipement requis, zéro pression sociale</td>
+                        <td>Publics sans connexion</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tag tag-comp">Compétence</span></td>
+                        <td><strong>Open Badges</strong></td>
+                        <td>Transforme l'effort en trophée numérique tangible</td>
+                        <td>Tous publics</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-tag tag-auto">Autonomie</span></td>
+                        <td><strong>Jeu de rôle "Mission"</strong></td>
+                        <td>Sort de la théorie, évalue ce qui compte vraiment</td>
+                        <td>Personnes exilées, démarches</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="quote-section">
+            <blockquote>«&nbsp;L'évaluation ne mesure pas ce que l'apprenant ne sait pas. Elle rend visible ce qu'il sait faire.&nbsp;»</blockquote>
+            <cite>Approche actionnelle — Fondation de l'Armée du Salut</cite>
+        </div>
+        <!-- Le pied de page du corps a été retiré pour éviter la redondance avec le footer global -->
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>contact@khairdidact.com</p>
+                    <p>+33 7 67 47 04 94</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Communauté</h3>
+                    <a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener">
+                        Rejoindre la communauté WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fondation Armée du Salut - Formateurs de Français</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script>
+</body>
+</html>

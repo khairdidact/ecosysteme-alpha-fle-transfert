@@ -4,307 +4,437 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaClé ALPHA — Méthode d'alphabétisation recommandée</title>
-    <meta name="description" content="Méthode rapide d'alphabétisation pour adultes, éditée par Retz/ScoLibris. Recommandée par la Fondation de l'Armée du Salut.">
-    <link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css">
-    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Méthode rapide d'alphabétisation pour adultes, éditée par Retz/ScoLibris.">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f1eb;
+            color: #1c1c1a;
+            line-height: 1.5;
+        }
+        /* Navigation simplifiée (reproduite ici pour l'autonomie) */
+        .navbar {
+            background: #1a3a5c;
+            padding: 1rem 2rem;
+            color: white;
+        }
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+        .navbar-title {
+            font-size: 1.2rem;
+        }
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+        /* Hero */
+        .hero {
+            background: #1a3a5c;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #e8540a;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.25rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        /* Section principale */
+        .section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .alert {
+            background: #fff8e8;
+            border-left: 4px solid #e8540a;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #e8540a;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #1a3a5c;
+            margin-bottom: 1rem;
+        }
+        /* Grille des livres */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .book-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-header {
+            padding: 1.5rem;
+        }
+        .book-level {
+            background: #fee2e2;
+            color: #991b1b;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .book-type {
+            color: #e8540a;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+        .book-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a3a5c;
+            margin: 0.5rem 0;
+        }
+        .book-author {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .book-desc {
+            font-size: 0.85rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .book-footer {
+            background: #f8f6f2;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-primary, .btn-outline {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: #1a3a5c;
+            color: white;
+        }
+        .btn-outline {
+            background: white;
+            border: 1px solid #1a3a5c;
+            color: #1a3a5c;
+        }
+        /* Acronym block */
+        .acronym-block {
+            background: #1a3a5c;
+            border-radius: 16px;
+            padding: 1.5rem;
+            color: white;
+            margin: 2rem 0;
+        }
+        .acronym-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+        .acronym-letter {
+            width: 32px;
+            height: 32px;
+            background: #e8540a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feat {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .feat-title {
+            font-weight: bold;
+            color: #1a3a5c;
+            margin-top: 0.5rem;
+        }
+        /* Usage block */
+        .usage-block {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .usage-card {
+            background: #f8f6f2;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .usage-card-title {
+            font-weight: bold;
+            color: #e8540a;
+        }
+        /* CTA block - hauteur réduite et marge intérieure adaptée */
+        .cta-block {
+            background: #e8540a;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;   /* réduction de la hauteur (anciennement 2rem) */
+            text-align: center;
+            color: white;
+            margin: 2rem 0;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .btn-white, .btn-white-outline {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-white {
+            background: white;
+            color: #e8540a;
+        }
+        .btn-white-outline {
+            border: 2px solid white;
+            color: white;
+        }
+        /* Footer */
+        .footer {
+            background: #1a3a5c;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
+        a {
+            color: white;
+        }
+        /* Utilitaires */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .divider {
+            margin: 1rem 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <nav class="navbar" role="navigation" aria-label="Navigation principale">
-        <div class="navbar-container">
-            <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
-                <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
-                <span class="navbar-title">Formateurs de Français</span>
-                <span class="navbar-subtitle">Fondation Armée du Salut</span>
-            </a>
-            <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="navbar-menu" id="navbar-menu">
-                <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
-                    <ul class="nav-submenu">
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
-                <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Employer une méthode</a>
-                </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes locales</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours durables</a></li>
-                <li class="nav-item">
-                    <a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a>
-                    <ul class="nav-submenu">
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/cecrl.html">CECRL</a></li>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S'informer</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
-                <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <main id="contenu" class="content-section macle-page">
-        <!-- Le contenu spécifique MaClé ALPHA commence ici -->
-        <div class="hero hero--macle">
-            <div class="hero-tag">Méthode recommandée — Alpha / A1.1</div>
-            <h1>MaClé ALPHA</h1>
-            <p>La méthode rapide d'alphabétisation pour adultes recommandée par la Fondation de l'Armée du Salut — éditions Retz / ScoLibris</p>
-        </div>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo">
+            <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <span class="navbar-title">Formateurs de Français</span>
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a></li>
+            <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes locales</a></li>
+        </ul>
+    </div>
+</nav>
 
-        <div class="section section--narrow">
-            <div class="alert">
-                <strong>Pourquoi cette méthode ?</strong>
-                MaClé ALPHA est conçue spécifiquement pour les adultes migrants de niveaux hétérogènes. Elle concilie acquisition de la lecture, préparation au niveau A1.1 du CECRL, et ancrage dans les situations réelles de la vie quotidienne. C'est la méthode que nous vous recommandons pour démarrer avec vos publics.
+<!-- Hero -->
+<div class="hero">
+    <div class="hero-tag">Méthode recommandée — Alpha / A1.1</div>
+    <h1>MaClé ALPHA</h1>
+    <p>Méthode rapide d'alphabétisation pour adultes — éditions Retz / ScoLibris</p>
+</div>
+
+<!-- Contenu principal -->
+<div class="section">
+    <div class="alert">
+        <strong>Pourquoi cette méthode ?</strong><br>
+        MaClé ALPHA est conçue spécifiquement pour les adultes migrants de niveaux hétérogènes. Elle concilie acquisition de la lecture, préparation au niveau A1.1 du CECRL, et ancrage dans les situations réelles de la vie quotidienne.
+    </div>
+
+    <div class="section-tag">La collection en 2 ouvrages</div>
+    <div class="section-title">Deux outils complémentaires</div>
+
+    <div class="books-grid">
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-level">A1.1</div>
+                <div class="book-type">Manuel principal</div>
+                <div class="book-title">MaClé ALPHA — Méthode rapide d'alphabétisation pour adultes</div>
+                <div class="book-author">Marion Aguilar — Éditions Retz / ScoLibris</div>
+                <p class="book-desc">Manuel complet du formateur. Fiches téléchargeables, exercices oraux, tableau des contenus, MP3, sujet DILF blanc.</p>
             </div>
-
-            <div class="section-tag">La collection en 2 ouvrages</div>
-            <div class="section-title">Deux outils complémentaires</div>
-
-            <div class="books-grid">
-                <div class="book-card">
-                    <div class="book-header">
-                        <div class="book-level">A1.1</div>
-                        <div class="book-type">Manuel principal</div>
-                        <div class="book-title">MaClé ALPHA — Méthode rapide d'alphabétisation pour adultes</div>
-                        <div class="book-author">Marion Aguilar — Éditions Retz / ScoLibris</div>
-                        <p class="book-desc">Le manuel complet du formateur. Il contient des fiches téléchargeables détaillées, des exercices oraux à faire en classe, un tableau des contenus pédagogiques, les pistes audio du CD en version MP3 téléchargeables, ainsi qu'un sujet de DILF blanc complet. L'apprentissage est rendu concret et efficace grâce à la mise en situation à partir de dialogues de la vie quotidienne enregistrés sur CD et de documents authentiques. Les thématiques, en phase avec les prescriptions de l'OFII, permettent d'aborder les sons et leurs graphies dans une progression en spirale par des activités orales et écrites avant tout leur prouver.</p>
-                    </div>
-                    <div class="book-footer">
-                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            Voir sur Retz.com
-                        </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            ScoLibris
-                        </a>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <div class="book-header">
-                        <div class="book-level">A1.1</div>
-                        <div class="book-type">Cahier d'exercices</div>
-                        <div class="book-title">MaClé ALPHA — Cahier d'écriture scripte pour adultes</div>
-                        <div class="book-author">Marion Aguilar — Éditions Retz / ScoLibris</div>
-                        <p class="book-desc">Ancré dans les besoins réels des adultes, ce cahier innovant propose d'apprendre rapidement et efficacement à écrire les mots les plus utiles et les plus fréquents, en s'appuyant sur des images réelles du quotidien. L'écriture scripte est privilégiée car c'est aujourd'hui la graphie scripte qui permet à l'apprenant de faire le lien entre ce qu'il lit et ce qu'il écrit. La priorité est de pouvoir rapidement écrire sur des imprimés fonctionnels (formulaires, enveloppes, etc.), qui requièrent une écriture scripte majuscule.</p>
-                    </div>
-                    <div class="book-footer">
-                        <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            Voir sur Retz.com
-                        </a>
-                        <a class="btn-outline" href="https://www.scolibris.fr/macle-alpha/" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            ScoLibris
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider" style="margin:0 0 32px;"></div>
-
-            <div class="section-tag">Ce que veut dire MaClé</div>
-            <div class="section-title" style="margin-bottom:16px;">Un acronyme, une philosophie</div>
-
-            <div class="acronym-block">
-                <h3>M — A — C — L — É — A—L—P—H—A</h3>
-                <div class="acronym-row"><div class="acronym-letter">M</div><div class="acronym-text"><strong>éthode</strong><span>Une approche structurée et progressive</span></div></div>
-                <div class="acronym-row"><div class="acronym-letter">A</div><div class="acronym-text"><strong>ctionnelle et</strong><span>On apprend en faisant, pas en mémorisant</span></div></div>
-                <div class="acronym-row"><div class="acronym-letter">C</div><div class="acronym-text"><strong>ommunicative d'apprentissage de la</strong><span>Priorité à la communication réelle</span></div></div>
-                <div class="acronym-row"><div class="acronym-letter">L</div><div class="acronym-text"><strong>ecture</strong><span>Lire les mots du quotidien en priorité</span></div></div>
-                <div class="acronym-row"><div class="acronym-letter">É</div><div class="acronym-text"><strong>criture pour adultes en</strong><span>Ecriture adaptée aux besoins réels des adultes</span></div></div>
-                <div style="display:flex;gap:8px;margin-top:4px;">
-                    <div class="acronym-letter" style="background:#085041;">A</div>
-                    <div class="acronym-letter" style="background:#085041;">L</div>
-                    <div class="acronym-letter" style="background:#085041;">P</div>
-                    <div class="acronym-letter" style="background:#085041;">H</div>
-                    <div class="acronym-letter" style="background:#085041;">A</div>
-                    <div style="font-size:13px;color:rgba(255,255,255,0.85);font-family:sans-serif;display:flex;align-items:center;padding-left:8px;font-weight:bold;">bétisation</div>
-                </div>
-            </div>
-
-            <div class="section-tag">Caractéristiques pédagogiques</div>
-            <div class="section-title" style="margin-bottom:16px;">Pourquoi cette méthode fonctionne</div>
-
-            <div class="features">
-                <div class="feat">
-                    <div class="feat-icon" style="background:#FAEEDA;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                    </div>
-                    <div class="feat-title">Pour adultes migrants hétérogènes</div>
-                    <div class="feat-desc">Conçue spécifiquement pour les groupes de niveaux variés, fréquents dans les structures d'accueil.</div>
-                </div>
-                <div class="feat">
-                    <div class="feat-icon" style="background:#E1F5EE;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <div class="feat-title">Rapide et efficace</div>
-                    <div class="feat-desc">Progression en spirale : chaque son est revu et consolidé à plusieurs reprises tout au long du manuel.</div>
-                </div>
-                <div class="feat">
-                    <div class="feat-icon" style="background:#EEEDFE;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                    </div>
-                    <div class="feat-title">Documents authentiques</div>
-                    <div class="feat-desc">Dialogues de la vie quotidienne, formulaires, panneaux — l'apprentissage part du réel immédiat.</div>
-                </div>
-                <div class="feat">
-                    <div class="feat-icon" style="background:#fee2e2;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <div class="feat-title">Préparation DILF/A1.1</div>
-                    <div class="feat-desc">Alignée sur les prescriptions de l'OFII. Inclut un sujet de DILF blanc complet pour l'entraînement.</div>
-                </div>
-                <div class="feat">
-                    <div class="feat-icon" style="background:#dbeafe;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                    </div>
-                    <div class="feat-title">Support audio inclus</div>
-                    <div class="feat-desc">CD audio + fichiers MP3 téléchargeables. Les dialogues sont enregistrés pour un travail oral authentique.</div>
-                </div>
-                <div class="feat">
-                    <div class="feat-icon" style="background:#dcfce7;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </div>
-                    <div class="feat-title">Ressources numériques gratuites</div>
-                    <div class="feat-desc">Guide formateur, fiches détaillées, exercices oraux, tableau des contenus — tout en accès libre.</div>
-                </div>
-            </div>
-
-            <div class="section-tag">Guide d'utilisation</div>
-            <div class="section-title" style="margin-bottom:16px;">29 unités — un catalogue, pas un chemin</div>
-
-            <div class="usage-block">
-                <h3>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Comment utiliser MaClé ALPHA efficacement
-                </h3>
-                <p style="font-family:sans-serif;font-size:13px;color:#444441;line-height:1.6;margin-bottom:16px;">
-                    MaClé Alpha propose une progression par unités. Ce n'est <strong>pas une progression scolaire à suivre mécaniquement</strong>, mais un repère pour le formateur, à piocher selon les besoins des apprenants et les situations du quotidien. Les 29 unités qui suivent sont donc <strong>un catalogue à piocher, pas un programme scolaire à dérouler</strong>.
-                </p>
-                <div class="usage-grid">
-                    <div class="usage-card">
-                        <div class="usage-card-title">Entrer par la situation</div>
-                        <div class="usage-card-desc">
-                            Partir de la situation de vie de l'apprenant cette semaine — un rendez-vous médical, un formulaire CAF, un trajet à prendre, une étiquette à lire — et chercher l'unité qui correspond. <strong>Pas l'inverse.</strong>
-                        </div>
-                    </div>
-                    <div class="usage-card">
-                        <div class="usage-card-title">Revenir en spirale</div>
-                        <div class="usage-card-desc">
-                            Revenir plusieurs fois sur une même graphie si elle résiste, dans des contextes différents. C'est la logique de la spirale : on revient plusieurs fois sur un même point sous des angles différents.
-                        </div>
-                    </div>
-                    <div class="usage-card">
-                        <div class="usage-card-title">Sauter sans scrupule</div>
-                        <div class="usage-card-desc">
-                            Sauter des unités sans scrupule quand elles ne servent pas le projet de l'apprenant à ce moment-là. L'objectif n'est pas de tout cocher.
-                        </div>
-                    </div>
-                    <div class="usage-card">
-                        <div class="usage-card-title">S'arrêter quand il faut</div>
-                        <div class="usage-card-desc">
-                            S'arrêter quand la relation l'exige, même au milieu d'une unité. La sécurité psychologique prime toujours.
-                        </div>
-                    </div>
-                </div>
-                <div class="usage-principle">
-                    <strong>Principe fondamental :</strong> Employer une méthode pour les règles d'usage générales, et toujours garder en tête les fondamentaux pour la cohérence doctrinale. Le <strong>pilier 4</strong> (sécurité psychologique) prime sur toute autre considération pédagogique.
-                </div>
-            </div>
-
-            <div class="section-tag">Publics concernés</div>
-            <div class="section-title" style="margin-bottom:16px;">Pour qui ?</div>
-
-            <div class="public-block">
-                <h3>MaClé ALPHA est idéale pour accompagner :</h3>
-                <div class="public-list">
-                    <div class="public-item">Les adultes migrants non ou peu scolarisés dans leur langue d'origine</div>
-                    <div class="public-item">Les groupes hétérogènes en alphabétisation ou FLE débutant</div>
-                    <div class="public-item">Les personnes en parcours d'intégration (Contrat d'Intégration Républicaine — CIR)</div>
-                    <div class="public-item">Les apprenants qui préparent le DILF ou visent le niveau A1.1</div>
-                    <div class="public-item">Toute personne ayant besoin d'acquérir les bases de la lecture et de l'écriture en français</div>
-                </div>
-            </div>
-
-            <div class="section-tag">Ressources gratuites associées</div>
-            <div class="section-title" style="margin-bottom:16px;">Tout est en accès libre sur scolibris.fr</div>
-
-            <div class="free-block">
-                <h3>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                    En un clic, sans inscription
-                </h3>
-                <div class="free-list">
-                    <div class="free-item">Guide du formateur complet avec fiches téléchargeables détaillées</div>
-                    <div class="free-item">Exercices oraux à faire en classe</div>
-                    <div class="free-item">Tableau des contenus pédagogiques du manuel</div>
-                    <div class="free-item">Pistes audio du CD en version MP3 téléchargeables</div>
-                    <div class="free-item">Sujet de DILF blanc complet pour l'entraînement à la certification</div>
-                    <div class="free-item">Nouvelles pièces et mises à jour pédagogiques</div>
-                </div>
-            </div>
-
-            <div class="cta-block">
-                <h3>Accéder à la méthode</h3>
-                <p>Commandez les ouvrages directement sur le site des éditions Retz, ou consultez gratuitement toutes les ressources numériques associées sur ScoLibris.</p>
-                <div class="cta-buttons">
-                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        Méthode — Éditions Retz
-                    </a>
-                    <a class="btn-white" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        Cahier d'écriture — Éditions Retz
-                    </a>
-                    <a class="btn-white-outline" href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Voir les Ressources MaClé Alpha
-                    </a>
-                </div>
+            <div class="book-footer">
+                <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-methode-rapide-d-alphabetisation-pour-adultes-9782725635989.html" target="_blank">Voir sur Retz.com</a>
+                <a class="btn-outline" href="https://scolibris.fr/" target="_blank">ScoLibris</a>
             </div>
         </div>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <p>contact@khairdidact.com</p>
-                    <p>+33 7 67 47 04 94</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Liens utiles</h3>
-                    <ul>
-                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du Site</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Communauté</h3>
-                    <a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener">
-                        Rejoindre la communauté WhatsApp
-                    </a>
-                </div>
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-level">A1.1</div>
+                <div class="book-type">Cahier d'exercices</div>
+                <div class="book-title">MaClé ALPHA — Cahier d'écriture scripte pour adultes</div>
+                <div class="book-author">Marion Aguilar — Éditions Retz / ScoLibris</div>
+                <p class="book-desc">Apprentissage rapide de l'écriture scripte, axé sur les mots utiles et les formulaires.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fondation Armée du Salut - Formateurs de Français</p>
+            <div class="book-footer">
+                <a class="btn-primary" href="https://www.editions-retz.com/inclusion/macle-alpha-cahier-d-ecriture-scripte-pour-adultes-9782725635996.html" target="_blank">Voir sur Retz.com</a>
+                <a class="btn-outline" href="https://scolibris.fr/" target="_blank">ScoLibris</a>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script>
+    <div class="divider"></div>
+
+    <div class="section-tag">Ce que veut dire MaClé</div>
+    <div class="section-title">Un acronyme, une philosophie</div>
+    <div class="acronym-block">
+        <div class="acronym-row"><div class="acronym-letter">M</div><div><strong>Méthode</strong> structurée et progressive</div></div>
+        <div class="acronym-row"><div class="acronym-letter">A</div><div><strong>Actionnelle</strong> : on apprend en faisant</div></div>
+        <div class="acronym-row"><div class="acronym-letter">C</div><div><strong>Communicative</strong> : priorité à la communication réelle</div></div>
+        <div class="acronym-row"><div class="acronym-letter">L</div><div><strong>Lecture</strong> des mots du quotidien</div></div>
+        <div class="acronym-row"><div class="acronym-letter">É</div><div><strong>Écriture</strong> adaptée aux adultes</div></div>
+        <div><strong>Alpha</strong> → Alphabétisation</div>
+    </div>
+
+    <div class="section-tag">Caractéristiques pédagogiques</div>
+    <div class="section-title">Pourquoi cette méthode fonctionne</div>
+    <div class="features">
+        <div class="feat"><div class="feat-title">Pour adultes migrants hétérogènes</div><div>Adaptée aux groupes de niveaux variés.</div></div>
+        <div class="feat"><div class="feat-title">Rapide et efficace</div><div>Progression en spirale.</div></div>
+        <div class="feat"><div class="feat-title">Documents authentiques</div><div>Dialogues, formulaires, panneaux.</div></div>
+        <div class="feat"><div class="feat-title">Préparation DILF/A1.1</div><div>Alignée OFII, sujet DILF blanc inclus.</div></div>
+        <div class="feat"><div class="feat-title">Support audio inclus</div><div>CD + MP3 téléchargeables.</div></div>
+        <div class="feat"><div class="feat-title">Ressources numériques gratuites</div><div>Guide, fiches, exercices sur scolibris.fr.</div></div>
+    </div>
+
+    <div class="section-tag">Guide d'utilisation</div>
+    <div class="section-title">29 unités — un catalogue, pas un chemin</div>
+    <div class="usage-block">
+        <p>MaClé Alpha propose une progression par unités. Ce n'est <strong>pas une progression scolaire à suivre mécaniquement</strong>, mais un repère à piocher.</p>
+        <div class="usage-grid">
+            <div class="usage-card"><div class="usage-card-title">Entrer par la situation</div><div>Partir du réel de l'apprenant.</div></div>
+            <div class="usage-card"><div class="usage-card-title">Revenir en spirale</div><div>Revoir les graphies résistantes sous différents angles.</div></div>
+            <div class="usage-card"><div class="usage-card-title">Sauter sans scrupule</div><div>Ignorer les unités non utiles.</div></div>
+            <div class="usage-card"><div class="usage-card-title">S'arrêter quand il faut</div><div>La sécurité psychologique prime.</div></div>
+        </div>
+    </div>
+
+    <div class="section-tag">Publics concernés</div>
+    <div class="section-title">Pour qui ?</div>
+    <div class="public-block" style="background:white; border:1px solid #ddd; border-radius:12px; padding:1rem; margin-bottom:2rem;">
+        <ul style="list-style: none; padding-left:0;">
+            <li>✓ Adultes migrants non ou peu scolarisés</li>
+            <li>✓ Groupes hétérogènes en alphabétisation ou FLE débutant</li>
+            <li>✓ Personnes en parcours d'intégration (CIR)</li>
+            <li>✓ Préparation DILF / A1.1</li>
+        </ul>
+    </div>
+
+    <!-- ZONE ORANGE MODIFIÉE -->
+    <div class="cta-block">
+        <h3>Accédez aux ressources MaClé Alpha</h3>
+        <!-- Le paragraphe original a été supprimé -->
+        <div class="cta-buttons">
+            <!-- Boutons Manuel et Cahier supprimés -->
+            <a class="btn-white-outline" href="https://khairdidact.github.io/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html" target="_blank">Cliquez ici</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div><h3>Contact</h3><p>contact@khairdidact.com</p></div>
+        <div><h3>Liens utiles</h3><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du site</a></div>
+        <div><h3>Communauté</h3><a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" target="_blank">WhatsApp</a></div>
+    </div>
+    <div class="footer-bottom">© 2024 Fondation Armée du Salut - Formateurs de Français</div>
+</footer>
+
 </body>
 </html>

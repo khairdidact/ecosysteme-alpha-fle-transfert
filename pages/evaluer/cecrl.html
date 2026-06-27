@@ -1,27 +1,346 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CECRL</title><meta name="description" content="Utiliser les niveaux A1.1, A1 et A2 comme repères opérationnels."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css"><link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#contenu">Aller au contenu</a>
-<nav class="navbar" role="navigation" aria-label="Navigation principale">
-  <div class="navbar-container">
-    <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
-      <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Emblème pédagogique inspiré des couleurs de la Fondation" class="logo-img">
-      <span><span class="navbar-title">Formateurs de Français</span><span class="navbar-subtitle">Fondation Armée du Salut</span></span>
-    </a>
-    <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
-    <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle"><span class="hamburger"></span></button>
-    <ul class="navbar-menu" id="navbar-menu">
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Valeurs</a><ul class="nav-submenu"><li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li><li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li></ul></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Groupe</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Méthodes</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S’informer</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
-      <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
-    </ul>
-  </div>
-</nav><main id="contenu"><header class="page-hero"><div class="container"><div class="breadcrumb"><a href="/ecosysteme-alpha-fle-transfert/">Accueil</a> · CECRL</div><h1>CECRL</h1><p>Utiliser les niveaux A1.1, A1 et A2 comme repères opérationnels.</p></div></header><section class="section"><div class="container"><div class="panel"><p>Pour les bénévoles, le CECRL sert surtout à décrire ce que la personne peut déjà faire : comprendre une consigne, se présenter, lire une information, écrire une donnée personnelle.</p></div></div></section></main>
-<footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div><h3>Contact</h3><p>contact@khairdidact.com</p><p>+33 7 67 47 04 94</p></div><div><h3>Liens utiles</h3><p><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du site</a></p><p><a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener">Site officiel de la Fondation</a></p></div><div><h3>Communauté</h3><a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener">Rejoindre la communauté WhatsApp</a></div></div><div class="footer-bottom"><p>© 2026 — Site pédagogique gratuit de soutien aux formateurs bénévoles de français. Projet non commercial.</p></div></div></footer><script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script></body></html>
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CECRL & Grilles d'évaluation — Formateurs bénévoles</title>
+    <meta name="description" content="Grilles d'évaluation CECRL adaptées aux publics en grande précarité : simples, visuelles, téléchargeables. Méthode Armée du Salut.">
+    <link rel="stylesheet" href="/ecosysteme-alpha-fle-transfert/assets/css/style.css">
+    <link rel="icon" href="/ecosysteme-alpha-fle-transfert/assets/images/favicon.ico">
+    <style>
+        /* ===== Styles spécifiques à la page CECRL ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        .hero { background: #1a3a5c; color: white; padding: 52px 40px; text-align: center; }
+        .hero-tag { display: inline-block; background: #e8540a; color: white; font-size: 11px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; margin-bottom: 16px; font-family: sans-serif; }
+        .hero h1 { font-size: 28px; font-weight: bold; line-height: 1.3; margin-bottom: 10px; max-width: 680px; margin-left: auto; margin-right: auto; }
+        .hero p { font-size: 15px; opacity: 0.82; max-width: 560px; margin: 0 auto; line-height: 1.7; font-family: sans-serif; }
+
+        .section { max-width: 760px; margin: 0 auto; padding: 40px 32px; }
+        .section-tag { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: #e8540a; font-family: sans-serif; margin-bottom: 8px; }
+        .section-title { font-size: 22px; color: #1a3a5c; font-weight: bold; margin-bottom: 10px; }
+        .section-intro { font-size: 14px; color: #6b6b67; font-family: sans-serif; line-height: 1.6; max-width: 600px; margin-bottom: 24px; }
+        .divider { border: none; border-top: 1px solid #d1cdc4; margin: 0 32px; }
+
+        /* CECRL TABLE */
+        .cecrl-table { width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; border: 1px solid #d1cdc4; font-family: sans-serif; font-size: 13px; background: white; }
+        .cecrl-table thead tr { background: #1a3a5c; color: white; }
+        .cecrl-table th { padding: 12px 16px; text-align: left; font-weight: bold; }
+        .cecrl-table td { padding: 12px 16px; border-bottom: 0.5px solid #e8e4de; vertical-align: middle; }
+        .cecrl-table tr:last-child td { border-bottom: none; }
+        .level-badge { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; font-weight: bold; font-size: 13px; flex-shrink: 0; }
+        .l-a1 { background: #fee2e2; color: #991b1b; }
+        .l-a2 { background: #fef3c7; color: #92400e; }
+        .l-b1 { background: #dcfce7; color: #166534; }
+        .l-b2 { background: #dbeafe; color: #1e40af; }
+        .l-c1 { background: #ede9fe; color: #5b21b6; }
+        .l-c2 { background: #f0fdf4; color: #14532d; border: 1.5px solid #86efac; }
+        .level-name { font-weight: bold; color: #1a3a5c; font-size: 13px; }
+        .level-code { font-size: 11px; color: #6b6b67; margin-top: 2px; }
+
+        /* MÉTHODE */
+        .method-block { background: #1a3a5c; border-radius: 14px; padding: 32px; margin-bottom: 32px; }
+        .method-block h2 { font-size: 18px; color: #FAC775; font-family: sans-serif; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .method-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .method-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .method-num { width: 36px; height: 36px; background: #e8540a; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: bold; font-family: sans-serif; flex-shrink: 0; }
+        .method-body strong { font-size: 14px; color: white; display: block; margin-bottom: 6px; font-family: sans-serif; }
+        .method-body p { font-size: 13px; color: rgba(255,255,255,0.78); font-family: sans-serif; line-height: 1.6; }
+        .method-body .highlight { background: rgba(232,84,10,0.3); border-radius: 4px; padding: 2px 7px; color: #FAC775; font-weight: bold; }
+
+        /* GRILLES */
+        .grilles-grid { display: flex; flex-direction: column; gap: 20px; }
+        .grille-card { background: white; border: 1px solid #d1cdc4; border-radius: 14px; overflow: hidden; }
+        .grille-header { padding: 18px 22px; border-bottom: 1px solid #e8e4de; display: flex; align-items: center; gap: 14px; }
+        .grille-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .gi-pos { background: #E1F5EE; }
+        .gi-vie { background: #FAEEDA; }
+        .gi-lud { background: #EEEDFE; }
+        .grille-header-text .title { font-size: 15px; font-weight: bold; color: #1a3a5c; font-family: sans-serif; }
+        .grille-header-text .subtitle { font-size: 12px; color: #6b6b67; font-family: sans-serif; margin-top: 2px; }
+        .grille-body { padding: 18px 22px; }
+        .grille-desc { font-size: 13px; color: #6b6b67; font-family: sans-serif; line-height: 1.6; margin-bottom: 16px; }
+
+        .grille-preview { background: #f8f6f2; border: 1px solid #e8e4de; border-radius: 8px; padding: 14px; margin-bottom: 16px; font-family: sans-serif; font-size: 12px; }
+        .preview-row { display: grid; font-weight: bold; color: #1a3a5c; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .preview-row-data { display: grid; padding: 8px 0; border-bottom: 0.5px solid #e8e4de; color: #444; font-size: 12px; align-items: center; }
+        .preview-row-data:last-child { border-bottom: none; }
+        .dot-red { color: #ef4444; font-size: 16px; }
+        .dot-orange { color: #f97316; font-size: 16px; }
+        .dot-green { color: #22c55e; font-size: 16px; }
+        .dot-cloud { font-size: 16px; }
+        .dot-sun { font-size: 16px; }
+
+        .btn-dl { display: inline-flex; align-items: center; gap: 8px; background: #1a3a5c; color: white; padding: 11px 20px; border-radius: 8px; font-size: 13px; font-weight: bold; text-decoration: none; font-family: sans-serif; transition: background 0.15s; }
+        .btn-dl:hover { background: #e8540a; }
+        .btn-dl svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+        .quote-section { background: #e8540a; padding: 44px 32px; text-align: center; }
+        .quote-section blockquote { font-size: 18px; font-style: italic; color: white; max-width: 620px; margin: 0 auto; line-height: 1.6; }
+        .quote-section cite { display: block; font-size: 12px; color: rgba(255,255,255,0.75); font-style: normal; font-family: sans-serif; margin-top: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="navbar-container">
+        <a href="/ecosysteme-alpha-fle-transfert/" class="navbar-logo" aria-label="Accueil">
+            <img src="/ecosysteme-alpha-fle-transfert/assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
+            <span class="navbar-title">Formateurs de Français</span>
+        </a>
+        <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
+        <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/" class="nav-link">Accueil</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/employer-une-methode/" class="nav-link">Employer une méthode</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/" class="nav-link">Supports</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/pictos.html">Pictos</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/planches.html">Planches</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/supports-telechargeables/activites.html">Activités</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/" class="nav-link">Sites utiles</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/jouer-en-ligne.html">Jouer en ligne</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/sites-utiles/creer-ses-applis.html">Créer ses applis</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/" class="nav-link">Mallettes locales</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/methode-macle-alpha.html">Méthode MaClé Alpha</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/ressources-macle-alpha.html">Ressources MaClé Alpha</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/mallettes-locales/jeux-de-societe.html">Jeux de société</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/parcours-durables.html" class="nav-link">Parcours durables</a></li>
+            <li class="nav-item">
+                <a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/" class="nav-link">Évaluer</a>
+                <ul class="nav-submenu">
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/cecrl.html" class="nav-link active">CECRL</a></li>
+                    <li><a href="/ecosysteme-alpha-fle-transfert/pages/evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/sinformer.html" class="nav-link">S'informer</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/se-former.html" class="nav-link">Se former</a></li>
+            <li class="nav-item"><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html" class="nav-link">Notice</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main>
+        <!-- HERO : éléments superposés et centrés -->
+<div class="hero">
+    <div class="hero-tag">CECRL &amp; Évaluation pratique</div>
+    <h1>Évaluer avec le CECRL sur le terrain</h1>
+    <p>Grilles d'évaluation adaptées aux publics en grande précarité — simples, visuelles, téléchargeables</p>
+</div>
+
+        <!-- CECRL : tableau des niveaux -->
+        <div class="section">
+            <div class="section-tag">Référentiel officiel simplifié</div>
+            <div class="section-title">Les 6 niveaux du CECRL</div>
+            <p class="section-intro">Le Cadre Européen Commun de Référence pour les Langues décrit ce que l'apprenant <strong>sait faire concrètement</strong> à chaque étape — pas ce qu'il ne sait pas encore.</p>
+
+            <table class="cecrl-table">
+                <thead>
+                    <tr>
+                        <th style="width:60px;">Niveau</th>
+                        <th style="width:120px;">Nom</th>
+                        <th>Ce que l'apprenant sait faire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="level-badge l-a1">A1</span></td><td><div class="level-name">Découverte</div><div class="level-code">Survie immédiate</div></td><td>Se présenter (nom, pays), poser des questions très simples, comprendre des consignes courtes si l'interlocuteur est patient.</td></tr>
+                    <tr><td><span class="level-badge l-a2">A2</span></td><td><div class="level-name">Survie</div><div class="level-code">Autonomie sociale</div></td><td>Faire des courses, aller chez le médecin, parler de son passé proche et de son travail avec des phrases simples.</td></tr>
+                    <tr><td><span class="level-badge l-b1">B1</span></td><td><div class="level-name">Seuil</div><div class="level-code">Indépendance</div></td><td>Se débrouiller seul en voyage, donner son avis sur un sujet familier, raconter une histoire ou un projet de manière cohérente.</td></tr>
+                    <tr><td><span class="level-badge l-b2">B2</span></td><td><div class="level-name">Avancé</div><div class="level-code">Argumentation</div></td><td>Soutenir un débat, comprendre l'essentiel d'un journal télévisé, s'exprimer avec aisance sans trop chercher ses mots.</td></tr>
+                    <tr><td><span class="level-badge l-c1">C1</span></td><td><div class="level-name">Autonome</div><div class="level-code">Expertise</div></td><td>Saisir l'implicite (humour, sarcasme), rédiger des textes complexes, être à l'aise dans tous les milieux professionnels.</td></tr>
+                    <tr><td><span class="level-badge l-c2">C2</span></td><td><div class="level-name">Maîtrise</div><div class="level-code">Bilinguisme</div></td><td>Comprendre tout sans effort, s'exprimer avec précision et nuance sur des sujets techniques ou philosophiques.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr class="divider">
+
+        <!-- MÉTHODE Armée du Salut -->
+        <div class="section">
+            <div class="section-tag">Méthode Armée du Salut</div>
+            <div class="section-title">3 principes non négociables</div>
+            <p class="section-intro">Avant d'utiliser une grille, intégrez ces trois réflexes. Ils font toute la différence avec ces publics.</p>
+
+            <div class="method-block">
+                <h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FAC775" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Comment évaluer ces publics
+                </h2>
+                <div class="method-item">
+                    <div class="method-num">1</div>
+                    <div class="method-body">
+                        <strong>Priorité à l'oral</strong>
+                        <p>Pour les publics en grande précarité, l'écrit est souvent un <span class="highlight">blocage psychologique majeur</span>. Commencez toujours par valider les compétences orales — même infra-A1 — avant d'introduire l'écrit. Une compétence orale reconnue redonne immédiatement confiance et légitime la présence de l'apprenant dans le groupe.</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <div class="method-num">2</div>
+                    <div class="method-body">
+                        <strong>La preuve par l'image</strong>
+                        <p>Dans vos grilles, <span class="highlight">remplacez les mots par des pictogrammes</span> dès que possible. Un téléphone pour "appeler", un caddie pour "faire les courses", une croix rouge pour "urgence médicale". L'image contourne le blocage de lecture, universalise la grille et la rend utilisable avec n'importe quelle langue d'origine.</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <div class="method-num">3</div>
+                    <div class="method-body">
+                        <strong>Valorisation immédiate</strong>
+                        <p>Dès qu'une case est cochée <span class="highlight">"Réussite totale"</span>, félicitez verbalement, immédiatement et sincèrement. Ne passez pas à la case suivante sans marquer l'instant. C'est le principe des <strong>micro-réussites</strong> : chaque petite victoire reconnue construit la confiance nécessaire pour continuer. Un apprenant qui repart avec une case verte se sent compétent — même si c'est la seule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- GRILLES téléchargeables -->
+        <div class="section">
+            <div class="section-tag">3 grilles téléchargeables</div>
+            <div class="section-title">Outils prêts à l'emploi</div>
+            <p class="section-intro">Chaque grille est téléchargeable en Word (.docx). Ouvrez-la dans Google Docs, modifiez-la, imprimez-la. Elle est conçue pour être utilisée directement sur le terrain.</p>
+
+            <div class="grilles-grid">
+                <!-- Grille A -->
+                <div class="grille-card">
+                    <div class="grille-header">
+                        <div class="grille-icon gi-pos">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div class="grille-header-text">
+                            <div class="title">Grille A — Positionnement rapide (Oral)</div>
+                            <div class="subtitle">Premier accueil · 10 min · Identifier le niveau d'entrée</div>
+                        </div>
+                    </div>
+                    <div class="grille-body">
+                        <p class="grille-desc">À utiliser lors du tout premier accueil pour placer l'apprenant dans le bon groupe, sans stress et sans écrit. Quatre indicateurs suffisent pour distinguer Infra-A1, vers A1 et A1 validé.</p>
+                        <div class="grille-preview">
+                            <div class="preview-row" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+                                <span>Indicateur</span><span class="dot-red">🔴</span><span class="dot-orange">🟠</span><span class="dot-green">🟢</span>
+                            </div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr;"><span>Comprend "Asseyez-vous"</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr;"><span>Peut dire son nom et pays</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr;"><span>Reconnaît les chiffres 1–10</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr;"><span>Sait poser une question de besoin</span><span>□</span><span>□</span><span>□</span></div>
+                        </div>
+                        <a class="btn-dl" href="https://docs.google.com/document/d/1naoa1cpkALdTCMIfpLDM3crCEPeN-WEw/export?format=docx" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Télécharger la Grille A (.docx)
+                        </a>
+                    </div>
+                </div>
+                <!-- Grille B -->
+                <div class="grille-card">
+                    <div class="grille-header">
+                        <div class="grille-icon gi-vie">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="grille-header-text">
+                            <div class="title">Grille B — Compétences "Vie Quotidienne" (A1/A2)</div>
+                            <div class="subtitle">Suivi · Tâches concrètes · Valorisation des progrès</div>
+                        </div>
+                    </div>
+                    <div class="grille-body">
+                        <p class="grille-desc">Idéale pour valoriser les progrès sur des tâches de la vie réelle. Dès qu'une case passe en "Réussite totale", félicitez immédiatement. C'est le principe des micro-réussites.</p>
+                        <div class="grille-preview">
+                            <div class="preview-row" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;">
+                                <span>Mission concrète</span><span>✅ Total</span><span>🤝 Aide</span><span>❌ Échec</span><span>Notes</span>
+                            </div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;"><span>Prendre un RDV (date + heure)</span><span>□</span><span>□</span><span>□</span><span style="color:#aaa;font-size:11px;">...</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;"><span>S'orienter (gauche, droite)</span><span>□</span><span>□</span><span>□</span><span style="color:#aaa;font-size:11px;">...</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;"><span>Faire un achat (comprendre le prix)</span><span>□</span><span>□</span><span>□</span><span style="color:#aaa;font-size:11px;">...</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;"><span>Urgence : expliquer un pb de santé</span><span>□</span><span>□</span><span>□</span><span style="color:#aaa;font-size:11px;">...</span></div>
+                        </div>
+                        <a class="btn-dl" href="https://docs.google.com/document/d/1GMY15OYGjUSdhd-I3lGW195DiwholzV5/export?format=docx" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Télécharger la Grille B (.docx)
+                        </a>
+                    </div>
+                </div>
+                <!-- Grille C -->
+                <div class="grille-card">
+                    <div class="grille-header">
+                        <div class="grille-icon gi-lud">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                        </div>
+                        <div class="grille-header-text">
+                            <div class="title">Grille C — Auto-évaluation ludique (format Météo)</div>
+                            <div class="subtitle">À remettre à l'apprenant · Rend visible ce qu'il sait</div>
+                        </div>
+                    </div>
+                    <div class="grille-body">
+                        <p class="grille-desc">L'apprenant évalue lui-même ses compétences avec des icônes météo. Pas de notes, pas de rouge/vert — juste la météo de sa progression. Très bien accepté par les publics qui redoutent l'évaluation.</p>
+                        <div class="grille-preview">
+                            <div class="preview-row" style="grid-template-columns: 2.5fr 1fr 1fr 1fr;">
+                                <span>Je suis capable de...</span><span class="dot-cloud">☁️ Difficile</span><span>🌤 Un peu</span><span class="dot-sun">☀️ Facile !</span>
+                            </div>
+                            <div class="preview-row-data" style="grid-template-columns: 2.5fr 1fr 1fr 1fr;"><span>Écrire mon nom et mon adresse</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2.5fr 1fr 1fr 1fr;"><span>Demander le prix d'un produit</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2.5fr 1fr 1fr 1fr;"><span>Comprendre l'heure d'un RDV</span><span>□</span><span>□</span><span>□</span></div>
+                            <div class="preview-row-data" style="grid-template-columns: 2.5fr 1fr 1fr 1fr;"><span>Dire ce que j'aime / n'aime pas</span><span>□</span><span>□</span><span>□</span></div>
+                        </div>
+                        <a class="btn-dl" href="https://docs.google.com/document/d/1buXkzb5gHexeQ9c5Lacr3TnxedNWFnFa/export?format=docx" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Télécharger la Grille C (.docx)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CITATION (intégrée au contenu principal, pas un footer) -->
+        <div class="quote-section">
+            <blockquote>« L'évaluation ne mesure pas ce que l'apprenant ne sait pas. Elle rend visible ce qu'il sait faire. »</blockquote>
+            <cite>Approche actionnelle — Fondation de l'Armée du Salut</cite>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>contact@khairdidact.com</p>
+                    <p>+33 7 67 47 04 94</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="/ecosysteme-alpha-fle-transfert/pages/notice.html">Notice du Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Communauté</h3>
+                    <a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener">
+                        Rejoindre la communauté WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Fondation Armée du Salut - Formateurs de Français</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/ecosysteme-alpha-fle-transfert/assets/js/main.js" defer></script>
+</body>
+</html>
