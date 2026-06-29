@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice – Formateurs FLE Armée du Salut</title>
+    <meta name="description" content="Notice d'utilisation du site Formateurs de français : repères, crédits, plan du site et cinq parcours d'usage illustrés.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <style>
+        :root {
+            --bleu: #1a3a5c;
+            --bleu-fonce: #122a43;
+            --orange: #e8540a;
+            --creme: #f7f2e9;
+            --papier: #ffffff;
+            --texte: #252525;
+            --muted: #66625d;
+            --bordure: #d8d0c3;
+            --vert: #0f766e;
+            --violet: #4c3f91;
+            --ombre: 0 12px 28px rgba(26, 58, 92, 0.08);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texte);
+            font-family: "PT Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.65;
+        }
+
+        .notice-page a {
+            color: var(--bleu);
+            font-weight: 700;
+            text-underline-offset: 3px;
+        }
+
+        .notice-page a:hover,
+        .notice-page a:focus {
+            color: var(--orange);
+        }
+
+        .notice-hero {
+            background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-fonce) 100%);
+            color: #ffffff;
+            padding: 62px 32px 58px;
+            text-align: center;
+        }
+
+        .notice-hero-tag {
+            display: inline-block;
+            background: #ffffff;
+            color: var(--bleu);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 99px;
+            margin-bottom: 18px;
+        }
+
+        .notice-hero h1 {
+            color: #ffffff;
+            font-family: Merriweather, Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.18;
+            margin: 0 0 16px;
+            text-wrap: balance;
+        }
+
+        .notice-hero p {
+            max-width: 820px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 16px;
+        }
+
+        .notice-section {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 44px 32px;
+        }
+
+        .section-intro {
+            max-width: 840px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .section-kicker {
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.11em;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-intro h2,
+        .notice-card h2,
+        .notice-card h3 {
+            color: var(--bleu);
+            font-family: Merriweather, Georgia, serif;
+            line-height: 1.25;
+            text-wrap: balance;
+        }
+
+        .section-intro h2 {
+            font-size: clamp(1.65rem, 3vw, 2.3rem);
+            margin: 0 0 12px;
+        }
+
+        .section-intro p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .notice-card {
+            background: var(--papier);
+            border: 1px solid var(--bordure);
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: var(--ombre);
+            margin-bottom: 28px;
+        }
+
+        .notice-card h2 {
+            font-size: 1.55rem;
+            margin: 0 0 14px;
+        }
+
+        .notice-card h3 {
+            font-size: 1.18rem;
+            margin: 0 0 8px;
+        }
+
+        .notice-card p {
+            margin: 0 0 14px;
+            color: var(--muted);
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: var(--bleu);
+            color: #ffffff !important;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .quick-link:hover,
+        .quick-link:focus {
+            background: var(--orange);
+            color: #ffffff !important;
+        }
+
+        .usage-menu {
+            display: grid;
+            gap: 16px;
+        }
+
+        .usage-route {
+            border: 1px solid var(--bordure);
+            border-radius: 18px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .usage-route summary {
+            list-style: none;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 64px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            padding: 20px 22px;
+        }
+
+        .usage-route summary::-webkit-details-marker { display: none; }
+
+        .usage-route[open] summary {
+            border-bottom: 1px solid var(--bordure);
+            background: #fbf9f4;
+        }
+
+        .route-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            background: #fff3c4;
+        }
+
+        .route-title {
+            color: var(--bleu);
+            font-family: Merriweather, Georgia, serif;
+            font-weight: 800;
+            font-size: 1.12rem;
+            line-height: 1.25;
+        }
+
+        .route-subtitle {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .route-arrow {
+            color: var(--orange);
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .usage-route[open] .route-arrow { transform: rotate(90deg); }
+
+        .route-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 22px;
+        }
+
+        .route-body p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .route-steps {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .route-steps li {
+            padding: 12px 14px;
+            background: var(--creme);
+            border-left: 5px solid var(--orange);
+            border-radius: 12px;
+            color: var(--texte);
+        }
+
+        .route-steps strong {
+            color: var(--bleu);
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .map-block {
+            background: #fbf9f4;
+            border: 1px solid #eadfcd;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .map-block ul {
+            margin: 12px 0 0;
+            padding-left: 18px;
+        }
+
+        .map-block li { margin: 7px 0; }
+
+        .legal-list {
+            display: grid;
+            gap: 10px;
+            margin: 16px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .legal-list li {
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: #fbf9f4;
+            border: 1px solid #eadfcd;
+        }
+
+        .notice-iframe-container {
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid var(--bordure);
+            background: #ffffff;
+        }
+
+        .notice-iframe {
+            width: 100%;
+            min-height: 520px;
+            border: 0;
+            display: block;
+        }
+
+        .notice-footer-note {
+            background: var(--orange);
+            color: #ffffff;
+            text-align: center;
+            padding: 34px 24px;
+        }
+
+        .notice-footer-note p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 960px) {
+            .quick-grid,
+            .map-grid,
+            .route-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .notice-hero { padding: 44px 20px; }
+            .notice-section { padding: 32px 20px; }
+            .notice-card { padding: 22px; }
+            .usage-route summary {
+                grid-template-columns: 48px 1fr;
+                gap: 12px;
+            }
+            .route-icon {
+                width: 46px;
+                height: 46px;
+                font-size: 23px;
+            }
+            .route-arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="navbar-container">
+            <a href="../" class="navbar-logo" aria-label="Accueil">
+                <img src="../assets/images/logo.png" alt="Logo Armée du Salut" class="logo-img">
+                <span class="navbar-title">Formateurs de Français</span>
+            </a>
+            <a href="https://www.armeedusalut.fr/" target="_blank" rel="noopener" class="navbar-foundation-link">Fondation Armée du Salut</a>
+            <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" id="menu-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="nav-item"><a href="../" class="nav-link">Accueil</a></li>
+                <li class="nav-item">
+                    <a href="agir-suivant-des-valeurs/" class="nav-link">Agir suivant des valeurs</a>
+                    <ul class="nav-submenu">
+                        <li><a href="agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                        <li><a href="agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="gerer-un-groupe.html" class="nav-link">Gérer un groupe</a></li>
+                <li class="nav-item"><a href="employer-une-methode/" class="nav-link">Employer une méthode</a></li>
+                <li class="nav-item">
+                    <a href="supports-telechargeables/" class="nav-link">Supports</a>
+                    <ul class="nav-submenu">
+                        <li><a href="supports-telechargeables/pictos.html">Pictos</a></li>
+                        <li><a href="supports-telechargeables/planches.html">Planches</a></li>
+                        <li><a href="supports-telechargeables/activites.html">Activités</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="sites-utiles/" class="nav-link">Sites utiles</a>
+                    <ul class="nav-submenu">
+                        <li><a href="sites-utiles/jouer-en-ligne.html">Jouer en ligne</a></li>
+                        <li><a href="sites-utiles/creer-ses-applis.html">Créer ses applis</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="activites-dun-jour.html" class="nav-link">Activités d'un jour</a></li>
+                <li class="nav-item">
+                    <a href="mallettes-locales/" class="nav-link">Mallettes locales</a>
+                    <ul class="nav-submenu">
+                        <li><a href="mallettes-locales/methode-macle-alpha.html">Méthode MaClé Alpha</a></li>
+                        <li><a href="mallettes-locales/ressources-macle-alpha.html">Ressources MaClé Alpha</a></li>
+                        <li><a href="mallettes-locales/jeux-de-societe.html">Jeux de société</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="parcours-durables.html" class="nav-link">Parcours durables</a></li>
+                <li class="nav-item">
+                    <a href="evaluer/" class="nav-link">Évaluer</a>
+                    <ul class="nav-submenu">
+                        <li><a href="evaluer/cecrl.html">CECRL</a></li>
+                        <li><a href="evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="sinformer.html" class="nav-link">S'informer</a></li>
+                <li class="nav-item"><a href="se-former.html" class="nav-link">Se former</a></li>
+                <li class="nav-item"><a href="notice.html" class="nav-link" aria-current="page">Notice</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="notice-page">
+        <header class="notice-hero">
+            <div class="notice-hero-tag">Notice du site</div>
+            <h1>Se repérer, utiliser, adapter</h1>
+            <p>
+                Cette notice explique l'organisation actuelle du site et propose cinq parcours d'usage
+                pour aider les formateurs de français à trouver rapidement les ressources utiles : posture,
+                méthodes, supports, jeux, sites externes et évaluation.
+            </p>
+        </header>
+
+        <section class="notice-section" aria-labelledby="parcours-usages">
+            <div class="section-intro">
+                <div class="section-kicker">Menu déroulant illustré</div>
+                <h2 id="parcours-usages">5 parcours d'usages pour entrer dans le site</h2>
+                <p>
+                    Ouvrir le parcours correspondant au besoin du moment. Chaque entrée indique les pages à consulter
+                    et la logique pédagogique d'utilisation.
+                </p>
+            </div>
+
+            <div class="usage-menu">
+                <details class="usage-route" open>
+                    <summary>
+                        <span class="route-icon" aria-hidden="true">🧭</span>
+                        <span>
+                            <span class="route-title">1. Découvrir le site et préparer une première séance</span>
+                            <span class="route-subtitle">Pour un nouveau bénévole ou un formateur qui veut aller à l'essentiel.</span>
+                        </span>
+                        <span class="route-arrow" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="route-body">
+                        <p>
+                            Commencer par comprendre l'esprit du site, puis choisir une activité simple,
+                            immédiatement utilisable avec un groupe Alpha / FLE.
+                        </p>
+                        <ol class="route-steps">
+                            <li><strong>Accueil :</strong> repérer les grandes rubriques.</li>
+                            <li><strong>Agir suivant des valeurs :</strong> poser le cadre relationnel.</li>
+                            <li><strong>Gérer un groupe :</strong> sécuriser l'animation collective.</li>
+                            <li><strong>Activités d'un jour :</strong> choisir une séance courte et praticable.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="usage-route">
+                    <summary>
+                        <span class="route-icon" aria-hidden="true">🧰</span>
+                        <span>
+                            <span class="route-title">2. Préparer un atelier avec des supports visuels</span>
+                            <span class="route-subtitle">Pour travailler avec des publics peu lecteurs ou débutants.</span>
+                        </span>
+                        <span class="route-arrow" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="route-body">
+                        <p>
+                            Les supports visuels permettent de réduire la dépendance à l'écrit et de renforcer
+                            la compréhension par l'image, la manipulation et la répétition.
+                        </p>
+                        <ol class="route-steps">
+                            <li><strong>Pictos :</strong> trouver des images pour la vie quotidienne.</li>
+                            <li><strong>Planches :</strong> composer des supports de séance.</li>
+                            <li><strong>Activités :</strong> transformer les supports en consignes simples.</li>
+                            <li><strong>Mallettes locales :</strong> organiser le matériel réutilisable.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="usage-route">
+                    <summary>
+                        <span class="route-icon" aria-hidden="true">📚</span>
+                        <span>
+                            <span class="route-title">3. Construire une progression durable</span>
+                            <span class="route-subtitle">Pour passer d'activités ponctuelles à un parcours cohérent.</span>
+                        </span>
+                        <span class="route-arrow" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="route-body">
+                        <p>
+                            Ce parcours aide à articuler méthode, progression, ressources locales et continuité
+                            d'apprentissage sans enfermer le formateur dans un programme rigide.
+                        </p>
+                        <ol class="route-steps">
+                            <li><strong>Employer une méthode :</strong> choisir un cadre de travail.</li>
+                            <li><strong>Méthode MaClé Alpha :</strong> utiliser un appui structurant.</li>
+                            <li><strong>Ressources MaClé Alpha :</strong> compléter avec des outils.</li>
+                            <li><strong>Parcours durables :</strong> organiser les étapes dans le temps.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="usage-route">
+                    <summary>
+                        <span class="route-icon" aria-hidden="true">🎲</span>
+                        <span>
+                            <span class="route-title">4. Faire pratiquer par le jeu et l'oral</span>
+                            <span class="route-subtitle">Pour provoquer la parole, la coopération et la mémorisation.</span>
+                        </span>
+                        <span class="route-arrow" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="route-body">
+                        <p>
+                            Le jeu aide à répéter sans lasser. Il peut être fabriqué, adapté ou choisi dans le commerce,
+                            à condition de prévoir la phrase-cible et la règle de parole.
+                        </p>
+                        <ol class="route-steps">
+                            <li><strong>Jeux de société :</strong> fabriquer, adapter ou sélectionner.</li>
+                            <li><strong>Jouer en ligne :</strong> varier les modalités.</li>
+                            <li><strong>Créer ses applis :</strong> produire des exercices simples.</li>
+                            <li><strong>Activités d'un jour :</strong> tester rapidement une idée.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="usage-route">
+                    <summary>
+                        <span class="route-icon" aria-hidden="true">🌱</span>
+                        <span>
+                            <span class="route-title">5. Évaluer sans décourager</span>
+                            <span class="route-subtitle">Pour observer les progrès et les rendre visibles.</span>
+                        </span>
+                        <span class="route-arrow" aria-hidden="true">›</span>
+                    </summary>
+                    <div class="route-body">
+                        <p>
+                            L'évaluation proposée vise à valoriser ce qui devient possible : comprendre,
+                            répondre, oser, reformuler, coopérer, transférer dans la vie quotidienne.
+                        </p>
+                        <ol class="route-steps">
+                            <li><strong>Évaluer :</strong> poser les principes d'une évaluation non bloquante.</li>
+                            <li><strong>CECRL :</strong> relier l'observation au cadre commun.</li>
+                            <li><strong>Valoriser le progrès :</strong> rendre visibles les petites réussites.</li>
+                            <li><strong>Se former :</strong> approfondir sa posture et ses outils.</li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="notice-section" aria-labelledby="acces-rapides">
+            <div class="notice-card">
+                <h2 id="acces-rapides">Accès rapides</h2>
+                <p>
+                    Ces boutons renvoient vers les grandes familles de ressources actuellement présentes dans le site.
+                </p>
+                <div class="quick-grid">
+                    <a class="quick-link" href="agir-suivant-des-valeurs/">Valeurs</a>
+                    <a class="quick-link" href="supports-telechargeables/">Supports</a>
+                    <a class="quick-link" href="mallettes-locales/">Mallettes</a>
+                    <a class="quick-link" href="evaluer/">Évaluer</a>
+                    <a class="quick-link" href="sites-utiles/">Sites utiles</a>
+                    <a class="quick-link" href="se-former.html">Se former</a>
+                    <a class="quick-link" href="sinformer.html">S'informer</a>
+                    <a class="quick-link" href="parcours-durables.html">Parcours</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="notice-section" aria-labelledby="plan-site">
+            <div class="notice-card">
+                <h2 id="plan-site">Plan fonctionnel du site</h2>
+                <div class="map-grid">
+                    <div class="map-block">
+                        <h3>Cadre et posture</h3>
+                        <ul>
+                            <li><a href="agir-suivant-des-valeurs/">Agir suivant des valeurs</a></li>
+                            <li><a href="agir-suivant-des-valeurs/les-fondamentaux.html">Les fondamentaux</a></li>
+                            <li><a href="agir-suivant-des-valeurs/le-bien-faire.html">Le bien faire</a></li>
+                            <li><a href="gerer-un-groupe.html">Gérer un groupe</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="map-block">
+                        <h3>Ressources et pratiques</h3>
+                        <ul>
+                            <li><a href="supports-telechargeables/pictos.html">Pictos</a></li>
+                            <li><a href="supports-telechargeables/planches.html">Planches</a></li>
+                            <li><a href="supports-telechargeables/activites.html">Activités</a></li>
+                            <li><a href="activites-dun-jour.html">Activités d'un jour</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="map-block">
+                        <h3>Méthodes et progression</h3>
+                        <ul>
+                            <li><a href="employer-une-methode/">Employer une méthode</a></li>
+                            <li><a href="mallettes-locales/methode-macle-alpha.html">Méthode MaClé Alpha</a></li>
+                            <li><a href="mallettes-locales/ressources-macle-alpha.html">Ressources MaClé Alpha</a></li>
+                            <li><a href="parcours-durables.html">Parcours durables</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="map-block">
+                        <h3>Jeux et outils numériques</h3>
+                        <ul>
+                            <li><a href="mallettes-locales/jeux-de-societe.html">Jeux de société</a></li>
+                            <li><a href="sites-utiles/jouer-en-ligne.html">Jouer en ligne</a></li>
+                            <li><a href="sites-utiles/creer-ses-applis.html">Créer ses applis</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="map-block">
+                        <h3>Évaluation</h3>
+                        <ul>
+                            <li><a href="evaluer/">Évaluer</a></li>
+                            <li><a href="evaluer/cecrl.html">CECRL</a></li>
+                            <li><a href="evaluer/valoriser-le-progres.html">Valoriser le progrès</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="map-block">
+                        <h3>Veille et formation</h3>
+                        <ul>
+                            <li><a href="sinformer.html">S'informer</a></li>
+                            <li><a href="se-former.html">Se former</a></li>
+                            <li><a href="notice.html">Notice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notice-section" aria-labelledby="mentions">
+            <div class="notice-card">
+                <h2 id="mentions">Mentions, usages et crédits</h2>
+                <p>
+                    Le site rassemble des ressources pédagogiques destinées aux formateurs de français,
+                    notamment pour des publics Alpha, A1.1 et FLE débutants. Les liens externes ouvrent dans
+                    leur environnement d'origine : vérifier leurs conditions d'utilisation avant réemploi massif.
+                </p>
+                <ul class="legal-list">
+                    <li><strong>Usage pédagogique :</strong> les contenus sont conçus pour préparer, animer et enrichir des ateliers de français.</li>
+                    <li><strong>Liens externes :</strong> Freepik, Fondation Autisme Luxembourg, Flippizz et autres ressources restent soumis à leurs propres règles.</li>
+                    <li><strong>Accessibilité :</strong> les contrastes, espacements et libellés de boutons doivent rester lisibles lors des ajouts futurs.</li>
+                    <li><strong>Maintenance :</strong> vérifier régulièrement les liens, surtout ceux qui pointent vers des sites tiers.</li>
+                    <li><strong>Contact :</strong> contact@khairdidact.com · +33 7 67 47 04 94.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="notice-section" aria-labelledby="notice-complete">
+            <div class="notice-card">
+                <h2 id="notice-complete">Notice complète intégrée</h2>
+                <p>
+                    La notice détaillée reste accessible ci-dessous. En cas de problème d'affichage,
+                    ouvrir directement la page dédiée :
+                    <a href="https://khairdidact.github.io/notice-site-centre-aide-pedagogique/" target="_blank" rel="noopener">notice-site-centre-aide-pedagogique</a>.
+                </p>
+                <div class="notice-iframe-container">
+                    <iframe class="notice-iframe"
+                            src="https://khairdidact.github.io/notice-site-centre-aide-pedagogique/"
+                            title="Notice complète – centre d'aide pédagogique"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        Votre navigateur ne supporte pas les iframes.
+                        <a href="https://khairdidact.github.io/notice-site-centre-aide-pedagogique/">Accéder directement à la notice</a>.
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <div class="notice-footer-note">
+            <p>
+                Une notice utile doit rester pratique : elle oriente les formateurs vers le bon usage,
+                au bon moment, sans remplacer leur jugement pédagogique ni leur connaissance du groupe.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>contact@khairdidact.com</p>
+                    <p>+33 7 67 47 04 94</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="notice.html">Notice du Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Communauté</h3>
+                    <a href="https://chat.whatsapp.com/LXLUmZsalqTKz6YKfuaWpG" class="btn btn--whatsapp" target="_blank" rel="noopener" style="color: #FFFFFF;">
+                        Rejoindre la communauté WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fondation Armée du Salut - Formateurs de Français</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
